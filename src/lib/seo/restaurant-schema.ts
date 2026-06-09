@@ -1,22 +1,21 @@
 /**
- * JSON-LD Structured Data for The Prime Cut Steakhouse.
- * Update placeholder values before going live.
+ * JSON-LD Structured Data for La Savi Steakhouse.
  * @see https://schema.org/Restaurant
  */
 export const restaurantJsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "@id": "https://www.theprimecutsteakhouse.com/#restaurant",
-  name: "The Prime Cut Steakhouse",
+  "@id": "https://www.lasavi.de/#restaurant",
+  name: "La Savi Steakhouse",
   description:
-    "Premium steakhouse offering artisan dry-aged cuts, fine dining, and an unforgettable culinary experience.",
-  url: "https://www.theprimecutsteakhouse.com",
-  image: "https://www.theprimecutsteakhouse.com/og-image.jpg",
-  telephone: "+1-000-000-0000",
-  email: "reservations@theprimecutsteakhouse.com",
-  priceRange: "$$$$",
-  servesCuisine: ["Steakhouse", "Fine Dining"],
+    "100 % Halal-zertifiziertes Steakhouse in Duisburg. Premium Steaks, Grill-Spezialitäten, Döner, Lammgerichte und Halal Dishes — mit höchstem Anspruch an Qualität.",
+  url: "https://www.lasavi.de",
+  image: "https://www.lasavi.de/og-image.jpg",
+  email: "kontakt@lasavi.de",
+  priceRange: "€€€",
+  servesCuisine: ["Steakhouse", "Grill", "Döner", "Lammgerichte", "Halal"],
   acceptsReservations: true,
+  suitableForDiet: "https://schema.org/HalalDiet",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -27,27 +26,22 @@ export const restaurantJsonLd = {
         "Thursday",
         "Friday",
         "Saturday",
-        "Sunday",
       ],
-      opens: "17:00",
-      closes: "23:00",
+      opens: "12:00",
+      closes: "22:00",
     },
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 Prime Cut Boulevard",
-    addressLocality: "New York",
-    addressRegion: "NY",
-    postalCode: "10001",
-    addressCountry: "US",
+    streetAddress: "Untermauerstraße 4",
+    addressLocality: "Duisburg",
+    postalCode: "47051",
+    addressCountry: "DE",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 40.7128,
-    longitude: -74.006,
+    latitude: 51.4328,
+    longitude: 6.7642,
   },
-  sameAs: [
-    "https://www.instagram.com/theprimecutsteakhouse",
-    "https://www.facebook.com/theprimecutsteakhouse",
-  ],
+  sameAs: ["https://www.lasavi.de"],
 } as const;

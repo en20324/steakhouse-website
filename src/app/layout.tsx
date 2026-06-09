@@ -20,16 +20,18 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Prime Cut Steakhouse | Artisan Steaks. Unforgettable Nights.",
+  title: "La Savi Steakhouse | Premium Steaks & Grill-Spezialitäten in Duisburg",
   description:
-    "Premium steakhouse offering artisan dry-aged cuts, fine dining, and an unforgettable culinary experience in the heart of the city.",
+    "La Savi Steakhouse in Duisburg — 100 % Halal-zertifiziert. Premium Steaks, Grill-Spezialitäten, Döner & Lammgerichte. Untermauerstraße 4, Mo–Sa 12:00–22:00 Uhr.",
+  metadataBase: new URL("https://www.lasavi.de"),
   openGraph: {
-    title: "The Prime Cut Steakhouse",
+    title: "La Savi Steakhouse",
     description:
-      "Artisan steaks, fine dining, and unforgettable nights. Reserve your table today.",
+      "100 % Halal-zertifiziert. Premium Steaks, Grill-Spezialitäten und Halal Dishes in Duisburg.",
     type: "website",
-    locale: "en_US",
-    siteName: "The Prime Cut Steakhouse",
+    locale: "de_DE",
+    siteName: "La Savi Steakhouse",
+    url: "https://www.lasavi.de",
   },
 };
 
@@ -40,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="de"
       className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}
       style={{ backgroundColor: "#050505" }}
     >
