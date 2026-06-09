@@ -4,7 +4,8 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
-import { BUSINESS } from "@/lib/data/business";
+import { BUSINESS } from "@/lib/data";
+import { useLanguage } from "@/context/LanguageProvider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -36,14 +37,16 @@ const selectClassName = cn(
   "flex h-11 w-full appearance-none rounded-xl border border-border-subtle bg-surface-elevated px-4 py-2 text-sm text-foreground transition-colors focus-visible:border-accent-gold/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-gold/20"
 );
 
-export default function Reservations() {
+interface ReservationsProps {
+  standalone?: boolean;
+}
+
+export default function Reservations({ standalone = false }: ReservationsProps) {
+  const { t } = useLanguage();
   const [form, setForm] = useState<ReservationFormData>(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
 
-  function handleChange(
-    field: keyof ReservationFormData,
-    value: string
-  ) {
+  function handleChange(field: keyof ReservationFormData, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
 
@@ -54,8 +57,8 @@ export default function Reservations() {
 
   return (
     <section
-      id="reservations"
-      className="relative w-full overflow-hidden bg-background py-24 sm:py-32"
+      id={standalone ? undefined : "reservations"}
+      className={`relative w-full overflow-hidden bg-background ${standalone ? "pb-24 pt-8 sm:pb-32" : "py-24 sm:py-32"}`}
       aria-labelledby="reservations-heading"
     >
       <div
@@ -72,17 +75,16 @@ export default function Reservations() {
           className="text-center"
         >
           <p className="text-xs font-medium uppercase tracking-[0.45em] text-accent-gold">
-            Reservierung
+            {t("reservation.eyebrow")}
           </p>
           <h2
             id="reservations-heading"
             className="mt-4 font-serif text-4xl tracking-wide text-foreground sm:text-5xl"
           >
-            Ihr Tisch wartet
+            {t("reservation.title")}
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-foreground-muted">
-            Reservieren Sie Ihren Besuch bei {BUSINESS.name} in Duisburg — wir
-            freuen uns auf Sie.
+            {t("reservation.subtitle")}
           </p>
         </motion.div>
 
@@ -96,11 +98,10 @@ export default function Reservations() {
           {submitted ? (
             <div className="py-8 text-center">
               <p className="font-serif text-2xl text-accent-gold">
-                Vielen Dank für Ihre Anfrage!
+                {t("reservation.successTitle")}
               </p>
               <p className="mt-3 text-sm text-foreground-muted">
-                Wir bestätigen Ihre Reservierung in Kürze per E-Mail oder
-                Telefon.
+                {t("reservation.successMessage")}
               </p>
               <Button
                 type="button"
@@ -111,56 +112,56 @@ export default function Reservations() {
                   setForm(INITIAL_FORM);
                 }}
               >
-                Neue Reservierung
+                {t("reservation.newReservation")}
               </Button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-2 sm:col-span-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name">{t("reservation.name")}</Label>
                   <Input
                     id="name"
                     name="name"
                     type="text"
                     required
                     autoComplete="name"
-                    placeholder="Ihr vollständiger Name"
+                    placeholder={t("reservation.namePlaceholder")}
                     value={form.name}
                     onChange={(e) => handleChange("name", e.target.value)}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">E-Mail</Label>
+                  <Label htmlFor="email">{t("reservation.email")}</Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     required
                     autoComplete="email"
-                    placeholder="name@beispiel.de"
+                    placeholder={t("reservation.emailPlaceholder")}
                     value={form.email}
                     onChange={(e) => handleChange("email", e.target.value)}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Telefon</Label>
+                  <Label htmlFor="phone">{t("reservation.phone")}</Label>
                   <Input
                     id="phone"
                     name="phone"
                     type="tel"
                     required
                     autoComplete="tel"
-                    placeholder="Ihre Telefonnummer"
+                    placeholder={t("reservation.phonePlaceholder")}
                     value={form.phone}
                     onChange={(e) => handleChange("phone", e.target.value)}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="date">Datum</Label>
+                  <Label htmlFor="date">{t("reservation.date")}</Label>
                   <Input
                     id="date"
                     name="date"
@@ -172,7 +173,7 @@ export default function Reservations() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="time">Uhrzeit</Label>
+                  <Label htmlFor="time">{t("reservation.time")}</Label>
                   <Input
                     id="time"
                     name="time"
@@ -184,7 +185,7 @@ export default function Reservations() {
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <Label htmlFor="guests">Personen</Label>
+                  <Label htmlFor="guests">{t("reservation.guests")}</Label>
                   <select
                     id="guests"
                     name="guests"
@@ -195,7 +196,10 @@ export default function Reservations() {
                   >
                     {GUEST_OPTIONS.map((count) => (
                       <option key={count} value={count}>
-                        {count} {count === "1" ? "Person" : "Personen"}
+                        {count}{" "}
+                        {count === "1"
+                          ? t("reservation.guestSingular")
+                          : t("reservation.guestPlural")}
                       </option>
                     ))}
                   </select>
@@ -203,7 +207,7 @@ export default function Reservations() {
               </div>
 
               <Button type="submit" size="lg" className="w-full">
-                Jetzt Tisch reservieren
+                {t("reservation.submit")}
               </Button>
             </form>
           )}
@@ -219,7 +223,7 @@ export default function Reservations() {
           <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
             <a href={`tel:${BUSINESS.phoneTel}`}>
               <Phone size={18} aria-hidden />
-              Direkt anrufen
+              {t("reservation.callDirect")}
             </a>
           </Button>
           <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
@@ -229,7 +233,7 @@ export default function Reservations() {
               rel="noopener noreferrer"
             >
               <MessageCircle size={18} aria-hidden />
-              WhatsApp
+              {t("reservation.whatsapp")}
             </Link>
           </Button>
         </motion.div>

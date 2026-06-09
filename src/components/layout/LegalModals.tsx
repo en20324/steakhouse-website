@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { BUSINESS } from "@/lib/data/business";
+import { BUSINESS } from "@/lib/data";
 import {
   Dialog,
   DialogContent,
@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useLanguage } from "@/context/LanguageProvider";
 
 function LegalSection({
   title,
@@ -157,14 +158,9 @@ function DatenschutzContent() {
       <LegalSection title="3. Erhebung und Speicherung personenbezogener Daten">
         <p>
           Beim Besuch unserer Website werden automatisch Informationen
-          allgemeiner Natur erfasst (z. B. Browsertyp, Betriebssystem,
-          Referrer-URL, Uhrzeit des Zugriffs). Diese Daten lassen keinen
-          unmittelbaren Rückschluss auf Ihre Person zu.
-        </p>
-        <p>
-          Wenn Sie unser Reservierungsformular nutzen, erheben wir die von Ihnen
-          angegebenen Daten (Name, E-Mail, Telefonnummer, Datum, Uhrzeit,
-          Personenzahl) ausschließlich zur Bearbeitung Ihrer Tischreservierung.
+          allgemeiner Natur erfasst. Wenn Sie unser Reservierungsformular nutzen,
+          erheben wir die von Ihnen angegebenen Daten ausschließlich zur
+          Bearbeitung Ihrer Tischreservierung.
         </p>
       </LegalSection>
 
@@ -172,64 +168,22 @@ function DatenschutzContent() {
         <p>
           Die Verarbeitung erfolgt zur Durchführung vorvertraglicher Maßnahmen
           und zur Erfüllung vertraglicher Pflichten (Art. 6 Abs. 1 lit. b
-          DSGVO) sowie auf Grundlage unseres berechtigten Interesses an einer
-          funktionsfähigen Website (Art. 6 Abs. 1 lit. f DSGVO).
+          DSGVO).
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Weitergabe von Daten">
+      <LegalSection title="5. Ihre Rechte">
         <p>
-          Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als
-          den im Folgenden genannten Zwecken findet nicht statt. Wir geben Ihre
-          persönlichen Daten nur weiter, wenn dies gesetzlich vorgeschrieben ist
-          oder Sie eingewilligt haben.
+          Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
+          Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.
+          Kontakt: {BUSINESS.email}
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Speicherdauer">
+      <LegalSection title="6. Google Maps">
         <p>
-          Wir speichern personenbezogene Daten nur so lange, wie dies für die
-          Erfüllung der jeweiligen Zwecke erforderlich ist oder gesetzliche
-          Aufbewahrungsfristen bestehen.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="7. Ihre Rechte">
-        <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
-        <ul className="mt-2 list-inside list-disc space-y-1">
-          <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-          <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-          <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-          <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-          <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-          <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
-        </ul>
-        <p className="mt-2">
-          Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: {BUSINESS.email}
-        </p>
-      </LegalSection>
-
-      <LegalSection title="8. Beschwerderecht">
-        <p>
-          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über
-          die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="9. SSL-/TLS-Verschlüsselung">
-        <p>
-          Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw.
-          TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran,
-          dass die Adresszeile des Browsers von „http://“ auf „https://“
-          wechselt.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="10. Aktualität und Änderung">
-        <p>
-          Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung
-          unserer Website oder aufgrund geänderter gesetzlicher bzw.
-          behördlicher Vorgaben kann eine Anpassung erforderlich werden.
+          Google Maps wird erst nach Ihrer ausdrücklichen Zustimmung geladen.
+          Dabei können Daten an Google LLC übermittelt werden.
         </p>
       </LegalSection>
     </div>
@@ -241,6 +195,8 @@ interface LegalModalsProps {
 }
 
 export function ImpressumModal({ triggerClassName }: LegalModalsProps) {
+  const { t } = useLanguage();
+
   return (
     <Dialog>
       <DialogTrigger
@@ -249,11 +205,11 @@ export function ImpressumModal({ triggerClassName }: LegalModalsProps) {
           "text-xs tracking-wide text-foreground-muted transition-colors hover:text-accent-gold"
         }
       >
-        Impressum
+        {t("footer.impressum")}
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Impressum</DialogTitle>
+          <DialogTitle>{t("footer.impressum")}</DialogTitle>
           <DialogDescription>
             Angaben gemäß § 5 TMG für {BUSINESS.legalName}
           </DialogDescription>
@@ -265,6 +221,8 @@ export function ImpressumModal({ triggerClassName }: LegalModalsProps) {
 }
 
 export function DatenschutzModal({ triggerClassName }: LegalModalsProps) {
+  const { t } = useLanguage();
+
   return (
     <Dialog>
       <DialogTrigger
@@ -273,11 +231,11 @@ export function DatenschutzModal({ triggerClassName }: LegalModalsProps) {
           "text-xs tracking-wide text-foreground-muted transition-colors hover:text-accent-gold"
         }
       >
-        Datenschutz
+        {t("footer.privacy")}
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Datenschutzerklärung</DialogTitle>
+          <DialogTitle>{t("footer.privacy")}</DialogTitle>
           <DialogDescription>
             Informationen zur Verarbeitung personenbezogener Daten
           </DialogDescription>

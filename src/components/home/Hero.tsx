@@ -4,11 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useLanguage } from "@/context/LanguageProvider";
 
 const EASE_PREMIUM = [0.16, 1, 0.3, 1] as const;
-
-const HEADLINE = "Kunstvolle Steaks. Unvergessliche Abende.";
-const WORDS = HEADLINE.split(" ");
 
 const HERO_IMAGE = {
   src: "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2400&auto=format&fit=crop",
@@ -16,12 +14,14 @@ const HERO_IMAGE = {
 } as const;
 
 export default function Hero() {
+  const { t } = useLanguage();
+  const words = t("hero.headline").split(" ");
+
   return (
     <section
       className="relative -mt-28 flex min-h-[100dvh] w-full items-center justify-center overflow-hidden"
       aria-label="Willkommen bei La Savi Steakhouse"
     >
-      {/* Ken Burns background */}
       <div className="absolute inset-0 bg-background">
         <motion.div
           className="absolute inset-0 will-change-transform"
@@ -46,7 +46,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Vignette & atmospheric overlays */}
       <div
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-[#050505]"
         aria-hidden
@@ -60,7 +59,6 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* Content */}
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pt-36 pb-28 text-center sm:px-6">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -68,11 +66,11 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: EASE_PREMIUM, delay: 0.15 }}
           className="text-xs font-medium uppercase tracking-[0.45em] text-accent-gold sm:text-sm"
         >
-          La Savi Steakhouse
+          {t("hero.eyebrow")}
         </motion.p>
 
         <h1 className="mt-8 font-serif text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.1] tracking-wide text-foreground">
-          {WORDS.map((word, index) => (
+          {words.map((word, index) => (
             <motion.span
               key={`${word}-${index}`}
               initial={{ opacity: 0, y: 32 }}
@@ -95,8 +93,7 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: EASE_PREMIUM, delay: 1.1 }}
           className="mt-6 max-w-2xl text-base leading-relaxed text-foreground-muted sm:text-lg"
         >
-          Perfektionierte Steaks, meisterhaftes Handwerk am Grill und
-          unvergessliche Abende.
+          {t("hero.subheadline")}
         </motion.p>
 
         <motion.div
@@ -106,10 +103,10 @@ export default function Hero() {
           className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5"
         >
           <Link
-            href="/#menu"
+            href="/menu"
             className="group relative w-full overflow-hidden rounded-full border border-accent-gold/35 bg-black/25 px-8 py-3.5 text-sm font-medium tracking-[0.12em] text-foreground backdrop-blur-sm transition-[box-shadow,border-color] duration-500 hover:border-accent-gold/60 hover:shadow-[0_0_32px_rgba(212,175,55,0.22)] sm:w-auto"
           >
-            <span className="relative z-10">Speisekarte</span>
+            <span className="relative z-10">{t("hero.ctaMenu")}</span>
             <span
               className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               style={{
@@ -121,15 +118,14 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/#reservations"
+            href="/reservation"
             className="w-full rounded-full bg-gradient-to-r from-accent-gold-light via-accent-gold to-accent-gold-light px-8 py-3.5 text-sm font-semibold tracking-[0.12em] text-[#1a1408] shadow-[0_4px_24px_rgba(212,175,55,0.28)] transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-[0_6px_36px_rgba(212,175,55,0.42)] active:scale-[0.98] sm:w-auto"
           >
-            Tisch reservieren
+            {t("hero.ctaReserve")}
           </Link>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -147,7 +143,7 @@ export default function Hero() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-[0.65rem] font-medium uppercase tracking-[0.35em] text-foreground-muted/70">
-            Weiter
+            {t("hero.scroll")}
           </span>
           <div className="flex h-10 w-6 items-start justify-center rounded-full border border-foreground-muted/30 p-1.5">
             <motion.span

@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "menu": "Speisekarte",
+    "gallery": "Galerie",
+    "contact": "Kontakt",
+    "reservation": "Reservierung",
+    "reserveTable": "Tisch reservieren",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "hero": {
+    "eyebrow": "La Savi Steakhouse",
+    "headline": "Kunstvolle Steaks. Unvergessliche Abende.",
+    "subheadline": "Perfektionierte Steaks, meisterhaftes Handwerk am Grill und unvergessliche Abende.",
+    "ctaMenu": "Speisekarte",
+    "ctaReserve": "Tisch reservieren",
+    "scroll": "Weiter"
+  },
+  "menu": {
+    "eyebrow": "La Savi Steakhouse",
+    "title": "Unsere Speisekarte",
+    "subtitle": "Premium Steaks, Grill-Spezialitäten und Halal-Gerichte — handverlesen und mit Leidenschaft zubereitet.",
+    "halalBadge": "100 % Halal zertifiziert",
+    "searchPlaceholder": "Gericht suchen…",
+    "allCategories": "Alle",
+    "pdfCta": "Komplette Menükarte als PDF ansehen",
+    "noResults": "Keine Gerichte gefunden.",
+    "allergens": "Allergene",
+    "pageTitle": "Digitale Speisekarte"
+  },
+  "reservation": {
+    "eyebrow": "Reservierung",
+    "title": "Ihr Tisch wartet",
+    "subtitle": "Reservieren Sie Ihren Besuch bei La Savi Steakhouse in Duisburg — wir freuen uns auf Sie.",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "guests": "Personen",
+    "guestSingular": "Person",
+    "guestPlural": "Personen",
+    "namePlaceholder": "Ihr vollständiger Name",
+    "emailPlaceholder": "name@beispiel.de",
+    "phonePlaceholder": "Ihre Telefonnummer",
+    "submit": "Jetzt Tisch reservieren",
+    "successTitle": "Vielen Dank für Ihre Anfrage!",
+    "successMessage": "Wir bestätigen Ihre Reservierung in Kürze per E-Mail oder Telefon.",
+    "newReservation": "Neue Reservierung",
+    "callDirect": "Direkt anrufen",
+    "whatsapp": "WhatsApp",
+    "pageTitle": "Tisch reservieren"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Besuchen Sie uns",
+    "subtitle": "Wir freuen uns auf Ihren Besuch in Duisburg.",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "instagram": "Folgen Sie uns auf Instagram",
+    "pageTitle": "Kontakt"
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Einblicke in La Savi",
+    "subtitle": "Atmosphäre, Küche und Momente — @lasavi_restaurant auf Instagram.",
+    "pageTitle": "Galerie",
+    "followInstagram": "Auf Instagram folgen"
+  },
+  "footer": {
+    "explore": "Entdecken",
+    "visitUs": "Besuchen Sie uns",
+    "hours": "Öffnungszeiten",
+    "rights": "Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "maps": {
+    "privacyNotice": "Google Maps anzeigen (Hinweis auf Datenschutz)",
+    "privacyDescription": "Beim Laden der Karte werden Daten an Google übermittelt. Weitere Informationen finden Sie in unserer Datenschutzerklärung.",
+    "loadMap": "Karte laden"
+  },
+  "qr": {
+    "title": "Digitale Speisekarte",
+    "subtitle": "Scannen Sie den QR-Code für unsere mobile Menükarte.",
+    "url": "lasavi.de/menu"
+  },
+  "common": {
+    "language": "Sprache"
+  }
+}

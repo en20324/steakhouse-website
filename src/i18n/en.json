@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "reservation": "Reservation",
+    "reserveTable": "Book a Table",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "La Savi Steakhouse",
+    "headline": "Artisan Steaks. Unforgettable Nights.",
+    "subheadline": "Perfected steaks, masterful grill craft, and unforgettable evenings.",
+    "ctaMenu": "View Menu",
+    "ctaReserve": "Book a Table",
+    "scroll": "Scroll"
+  },
+  "menu": {
+    "eyebrow": "La Savi Steakhouse",
+    "title": "Our Menu",
+    "subtitle": "Premium steaks, grill specialties and halal dishes — handpicked and prepared with passion.",
+    "halalBadge": "100% Halal certified",
+    "searchPlaceholder": "Search dishes…",
+    "allCategories": "All",
+    "pdfCta": "View full menu as PDF",
+    "noResults": "No dishes found.",
+    "allergens": "Allergens",
+    "pageTitle": "Digital Menu"
+  },
+  "reservation": {
+    "eyebrow": "Reservation",
+    "title": "Your Table Awaits",
+    "subtitle": "Reserve your visit at La Savi Steakhouse in Duisburg — we look forward to welcoming you.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "date": "Date",
+    "time": "Time",
+    "guests": "Guests",
+    "guestSingular": "Guest",
+    "guestPlural": "Guests",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "name@example.com",
+    "phonePlaceholder": "Your phone number",
+    "submit": "Reserve Now",
+    "successTitle": "Thank you for your request!",
+    "successMessage": "We will confirm your reservation shortly by email or phone.",
+    "newReservation": "New Reservation",
+    "callDirect": "Call Directly",
+    "whatsapp": "WhatsApp",
+    "pageTitle": "Book a Table"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Visit Us",
+    "subtitle": "We look forward to your visit in Duisburg.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours",
+    "instagram": "Follow us on Instagram",
+    "pageTitle": "Contact"
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "Inside La Savi",
+    "subtitle": "Atmosphere, cuisine and moments — @lasavi_restaurant on Instagram.",
+    "pageTitle": "Gallery",
+    "followInstagram": "Follow on Instagram"
+  },
+  "footer": {
+    "explore": "Explore",
+    "visitUs": "Visit Us",
+    "hours": "Opening Hours",
+    "rights": "All rights reserved.",
+    "impressum": "Legal Notice",
+    "privacy": "Privacy Policy"
+  },
+  "maps": {
+    "privacyNotice": "Show Google Maps (privacy notice)",
+    "privacyDescription": "Loading the map transmits data to Google. See our privacy policy for details.",
+    "loadMap": "Load Map"
+  },
+  "qr": {
+    "title": "Digital Menu",
+    "subtitle": "Scan the QR code for our mobile menu.",
+    "url": "lasavi.de/menu"
+  },
+  "common": {
+    "language": "Language"
+  }
+}

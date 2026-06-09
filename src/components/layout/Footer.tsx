@@ -1,16 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { BUSINESS, BUSINESS_ADDRESS } from "@/lib/data/business";
+import { BUSINESS, BUSINESS_ADDRESS } from "@/lib/data";
 import { ImpressumModal, DatenschutzModal } from "@/components/layout/LegalModals";
+import { useLanguage } from "@/context/LanguageProvider";
 
 const FOOTER_LINKS = [
-  { href: "/#menu", label: "Speisekarte" },
-  { href: "/#reservations", label: "Reservierung" },
-  { href: "/#reservations", label: "Kontakt" },
+  { href: "/menu", key: "nav.menu" },
+  { href: "/reservation", key: "nav.reservation" },
+  { href: "/contact", key: "nav.contact" },
 ] as const;
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -34,16 +38,16 @@ export default function Footer() {
 
           <div>
             <h3 className="font-serif text-sm tracking-[0.2em] text-accent-gold uppercase">
-              Entdecken
+              {t("footer.explore")}
             </h3>
             <ul className="mt-5 space-y-3">
               {FOOTER_LINKS.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     className="text-sm text-foreground-muted transition-colors hover:text-accent-gold"
                   >
-                    {link.label}
+                    {t(link.key)}
                   </Link>
                 </li>
               ))}
@@ -52,7 +56,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-serif text-sm tracking-[0.2em] text-accent-gold uppercase">
-              Besuchen Sie uns
+              {t("footer.visitUs")}
             </h3>
             <ul className="mt-5 space-y-4">
               <li className="flex gap-3 text-sm text-foreground-muted">
@@ -90,7 +94,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-serif text-sm tracking-[0.2em] text-accent-gold uppercase">
-              Öffnungszeiten
+              {t("footer.hours")}
             </h3>
             <ul className="mt-5 space-y-3">
               <li className="flex gap-3 text-sm text-foreground-muted">
@@ -106,11 +110,11 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border-subtle pt-8 sm:flex-row">
           <p className="text-xs tracking-wide text-foreground-muted">
-            &copy; {currentYear} {BUSINESS.legalName}. Alle Rechte vorbehalten.
+            &copy; {currentYear} {BUSINESS.legalName}. {t("footer.rights")}
           </p>
           <div className="flex items-center gap-6">
-            <DatenschutzModal />
-            <ImpressumModal />
+            <DatenschutzModal triggerClassName="text-xs tracking-wide text-foreground-muted transition-colors hover:text-accent-gold" />
+            <ImpressumModal triggerClassName="text-xs tracking-wide text-foreground-muted transition-colors hover:text-accent-gold" />
           </div>
         </div>
 

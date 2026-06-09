@@ -1,3 +1,5 @@
+import { BUSINESS } from "@/lib/data";
+
 /**
  * JSON-LD Structured Data for La Savi Steakhouse.
  * @see https://schema.org/Restaurant
@@ -6,13 +8,13 @@ export const restaurantJsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "@id": "https://www.lasavi.de/#restaurant",
-  name: "La Savi Steakhouse",
+  name: BUSINESS.name,
   description:
-    "100 % Halal-zertifiziertes Steakhouse in Duisburg. Premium Steaks, Grill-Spezialitäten, Döner, Lammgerichte und Halal Dishes — mit höchstem Anspruch an Qualität.",
-  url: "https://www.lasavi.de",
+    "100 % Halal-zertifiziertes Steakhouse in Duisburg. Premium Steaks, Grill-Spezialitäten, Döner, Lammgerichte und Halal Dishes.",
+  url: BUSINESS.website,
   image: "https://www.lasavi.de/og-image.jpg",
   telephone: "+49-163-4588988",
-  email: "kontakt@lasavi.de",
+  email: BUSINESS.email,
   priceRange: "€€€",
   servesCuisine: ["Steakhouse", "Grill", "Döner", "Lammgerichte", "Halal"],
   acceptsReservations: true,
@@ -34,15 +36,15 @@ export const restaurantJsonLd = {
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Untermauerstraße 4",
-    addressLocality: "Duisburg",
-    postalCode: "47051",
+    streetAddress: BUSINESS.street,
+    addressLocality: BUSINESS.city,
+    postalCode: BUSINESS.postalCode,
     addressCountry: "DE",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 51.4328,
-    longitude: 6.7642,
+    latitude: BUSINESS.coordinates.lat,
+    longitude: BUSINESS.coordinates.lng,
   },
-  sameAs: ["https://www.lasavi.de"],
+  sameAs: [BUSINESS.website, BUSINESS.instagram],
 } as const;

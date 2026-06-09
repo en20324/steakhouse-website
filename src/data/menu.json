@@ -1,0 +1,178 @@
+{
+  "categories": [
+    {
+      "id": "highlights",
+      "name": {
+        "de": "Beliebt",
+        "en": "Highlights",
+        "tr": "Popüler"
+      }
+    },
+    {
+      "id": "salate",
+      "name": {
+        "de": "Salate",
+        "en": "Salads",
+        "tr": "Salatalar"
+      }
+    },
+    {
+      "id": "grill-steaks",
+      "name": {
+        "de": "Grill & Steaks",
+        "en": "Grill & Steaks",
+        "tr": "Izgara & Steaks"
+      }
+    },
+    {
+      "id": "nachtisch",
+      "name": {
+        "de": "Nachtisch",
+        "en": "Desserts",
+        "tr": "Tatlılar"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "02",
+      "number": "02",
+      "category": "salate",
+      "price": 7.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hirtensalat-Feta Käse",
+        "en": "Shepherd's Salad with Feta",
+        "tr": "Çoban Salatası — Feta Peynirli"
+      },
+      "description": {
+        "de": "Mit Granatapfeldressing oder Kräuterdressing — frisch und aromatisch.",
+        "en": "With pomegranate or herb dressing — fresh and aromatic.",
+        "tr": "Nar veya ot sosu ile — taze ve aromatik."
+      },
+      "tags": ["vegetarian", "bestseller"],
+      "allergens": ["milch"],
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "05",
+      "number": "05",
+      "category": "salate",
+      "price": 11.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Kräuter Blätter Salat-Büffelmozzarella",
+        "en": "Herb Leaf Salad with Buffalo Mozzarella",
+        "tr": "Ot Yapraklı Salata — Manda Mozzarella"
+      },
+      "description": {
+        "de": "Frische Kräuterblätter mit cremigem Büffelmozzarella und feinem Dressing.",
+        "en": "Fresh herb leaves with creamy buffalo mozzarella and fine dressing.",
+        "tr": "Kremsi manda mozzarellalı taze ot yapraklı salata."
+      },
+      "tags": ["vegetarian"],
+      "allergens": ["milch"],
+      "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "22",
+      "number": "22",
+      "category": "grill-steaks",
+      "price": 23.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Gemischter Grill Teller Mixed",
+        "en": "Mixed Grill Plate",
+        "tr": "Karışık Izgara Tabağı"
+      },
+      "description": {
+        "de": "Auswahl unserer besten Grill-Spezialitäten — vom offenen Feuer, halal zubereitet.",
+        "en": "Selection of our finest grill specialties — halal prepared over open flame.",
+        "tr": "En iyi ızgara spesiyallerimizden seçme — helal, açık ateşte."
+      },
+      "tags": ["halal", "bestseller"],
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "34",
+      "number": "34",
+      "category": "grill-steaks",
+      "price": 39.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Filet Steak ca. 300 gr",
+        "en": "Fillet Steak approx. 300 g",
+        "tr": "Fileto Steak yakl. 300 gr"
+      },
+      "description": {
+        "de": "Zartes Rinderfilet vom Grill, butterweich und auf den Punkt gegart.",
+        "en": "Tender beef fillet from the grill, cooked to perfection.",
+        "tr": "Izgaradan yumuşacık dana fileto, mükemmel pişmiş."
+      },
+      "tags": ["halal", "premium"],
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "39",
+      "number": "39",
+      "category": "grill-steaks",
+      "price": 129.0,
+      "currency": "EUR",
+      "name": {
+        "de": "Wagyu Filet ca. 200 gr",
+        "en": "Wagyu Fillet approx. 200 g",
+        "tr": "Wagyu Fileto yakl. 200 gr"
+      },
+      "description": {
+        "de": "Exklusives Wagyu-Filet von höchster Marmorierung — ein außergewöhnliches Geschmackserlebnis.",
+        "en": "Exclusive Wagyu fillet with supreme marbling — an extraordinary taste experience.",
+        "tr": "Üstün mermerleme ile özel Wagyu fileto — olağanüstü bir lezzet deneyimi."
+      },
+      "tags": ["halal", "premium", "bestseller"],
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1615937657715-bc7b4b796122?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "42",
+      "number": "42",
+      "category": "nachtisch",
+      "price": 7.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Katmer",
+        "en": "Katmer",
+        "tr": "Katmer"
+      },
+      "description": {
+        "de": "Gefalteter Teig mit Sahne und Pistazien, warm serviert.",
+        "en": "Folded pastry with cream and pistachios, served warm.",
+        "tr": "Krema ve antep fıstığı ile katlanmış hamur, sıcak servis."
+      },
+      "tags": ["vegetarian", "bestseller"],
+      "allergens": ["gluten", "milch", "nüsse"],
+      "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "43",
+      "number": "43",
+      "category": "nachtisch",
+      "price": 7.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Künefe",
+        "en": "Künefe",
+        "tr": "Künefe"
+      },
+      "description": {
+        "de": "Fadenteig mit Käse, goldbraun gebacken und mit Sirup verfeinert.",
+        "en": "Shredded phyllo with cheese, baked golden and finished with syrup.",
+        "tr": "Peynirli tel kadayıf, altın renginde pişirilmiş, şerbetli."
+      },
+      "tags": ["vegetarian", "bestseller"],
+      "allergens": ["gluten", "milch"],
+      "image": "https://images.unsplash.com/photo-1574484284002-952d92456991?q=80&w=800&auto=format&fit=crop"
+    }
+  ]
+}

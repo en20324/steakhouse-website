@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "menu": "Menü",
+    "gallery": "Galeri",
+    "contact": "İletişim",
+    "reservation": "Rezervasyon",
+    "reserveTable": "Masa Ayırt",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
+  },
+  "hero": {
+    "eyebrow": "La Savi Steakhouse",
+    "headline": "Usta İşi Steaks. Unutulmaz Akşamlar.",
+    "subheadline": "Mükemmelleştirilmiş steaks, usta ızgara işçiliği ve unutulmaz akşamlar.",
+    "ctaMenu": "Menü",
+    "ctaReserve": "Masa Ayırt",
+    "scroll": "Aşağı"
+  },
+  "menu": {
+    "eyebrow": "La Savi Steakhouse",
+    "title": "Menümüz",
+    "subtitle": "Premium steaks, ızgara spesiyalleri ve helal yemekler — özenle seçilmiş ve tutkuyla hazırlanmış.",
+    "halalBadge": "%100 Helal sertifikalı",
+    "searchPlaceholder": "Yemek ara…",
+    "allCategories": "Tümü",
+    "pdfCta": "Tam menüyü PDF olarak görüntüle",
+    "noResults": "Yemek bulunamadı.",
+    "allergens": "Alerjenler",
+    "pageTitle": "Dijital Menü"
+  },
+  "reservation": {
+    "eyebrow": "Rezervasyon",
+    "title": "Masanız Hazır",
+    "subtitle": "Duisburg'daki La Savi Steakhouse'ta ziyaretinizi ayırtın — sizi ağırlamaktan mutluluk duyarız.",
+    "name": "Ad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "date": "Tarih",
+    "time": "Saat",
+    "guests": "Kişi",
+    "guestSingular": "Kişi",
+    "guestPlural": "Kişi",
+    "namePlaceholder": "Adınız ve soyadınız",
+    "emailPlaceholder": "ad@ornek.com",
+    "phonePlaceholder": "Telefon numaranız",
+    "submit": "Şimdi Rezervasyon Yap",
+    "successTitle": "Talebiniz için teşekkürler!",
+    "successMessage": "Rezervasyonunuzu kısa süre içinde e-posta veya telefonla onaylayacağız.",
+    "newReservation": "Yeni Rezervasyon",
+    "callDirect": "Doğrudan Ara",
+    "whatsapp": "WhatsApp",
+    "pageTitle": "Masa Ayırt"
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Bizi Ziyaret Edin",
+    "subtitle": "Duisburg'da sizi ağırlamaktan mutluluk duyarız.",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "hours": "Çalışma Saatleri",
+    "instagram": "Instagram'da bizi takip edin",
+    "pageTitle": "İletişim"
+  },
+  "gallery": {
+    "eyebrow": "Galeri",
+    "title": "La Savi'den Kareler",
+    "subtitle": "Atmosfer, mutfak ve anlar — Instagram'da @lasavi_restaurant.",
+    "pageTitle": "Galeri",
+    "followInstagram": "Instagram'da Takip Et"
+  },
+  "footer": {
+    "explore": "Keşfet",
+    "visitUs": "Bizi Ziyaret Edin",
+    "hours": "Çalışma Saatleri",
+    "rights": "Tüm hakları saklıdır.",
+    "impressum": "Künye",
+    "privacy": "Gizlilik"
+  },
+  "maps": {
+    "privacyNotice": "Google Haritalar'ı göster (gizlilik bildirimi)",
+    "privacyDescription": "Harita yüklenirken Google'a veri aktarılır. Detaylar için gizlilik politikamıza bakın.",
+    "loadMap": "Haritayı Yükle"
+  },
+  "qr": {
+    "title": "Dijital Menü",
+    "subtitle": "Mobil menümüz için QR kodu tarayın.",
+    "url": "lasavi.de/menu"
+  },
+  "common": {
+    "language": "Dil"
+  }
+}
