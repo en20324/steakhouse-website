@@ -11,6 +11,7 @@ export const restaurantJsonLd = {
     "100 % Halal-zertifiziertes Steakhouse in Duisburg. Premium Steaks, Grill-Spezialitäten, Döner, Lammgerichte und Halal Dishes — mit höchstem Anspruch an Qualität.",
   url: "https://www.lasavi.de",
   image: "https://www.lasavi.de/og-image.jpg",
+  telephone: "+49-203-39689883",
   email: "kontakt@lasavi.de",
   priceRange: "€€€",
   servesCuisine: ["Steakhouse", "Grill", "Döner", "Lammgerichte", "Halal"],

@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { href: "/menu", label: "Menu" },
-  { href: "/reservations", label: "Reservations" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#menu", label: "Speisekarte" },
+  { href: "/#reservations", label: "Reservierung" },
+  { href: "/#reservations", label: "Kontakt" },
 ] as const;
 
 export default function Header() {
@@ -22,25 +22,27 @@ export default function Header() {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-4 flex items-center justify-between rounded-2xl border border-border bg-surface-glass px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-6"
-          aria-label="Main navigation"
+          className="mt-4 flex items-center justify-between rounded-2xl border border-border bg-surface-glass px-5 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-6"
+          aria-label="Hauptnavigation"
         >
           <Link
             href="/"
-            className="group flex flex-col leading-none"
+            className="group relative flex shrink-0 items-center"
             onClick={() => setIsOpen(false)}
           >
-            <span className="font-serif text-xl tracking-[0.18em] text-foreground sm:text-2xl">
-              MAISON
-            </span>
-            <span className="mt-0.5 text-[0.6rem] font-medium uppercase tracking-[0.35em] text-accent-gold transition-colors group-hover:text-accent-amber sm:text-xs">
-              Steakhouse
-            </span>
+            <Image
+              src="/logo-la-savi.webp"
+              alt="La Savi Steakhouse Logo"
+              width={160}
+              height={48}
+              priority
+              className="h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-12"
+            />
           </Link>
 
           <ul className="hidden items-center gap-1 md:flex">
             {NAV_LINKS.map((link) => (
-              <li key={link.href}>
+              <li key={link.label}>
                 <Link
                   href={link.href}
                   className="relative rounded-lg px-4 py-2 text-sm font-medium tracking-wide text-foreground-muted transition-colors hover:text-foreground"
@@ -53,10 +55,10 @@ export default function Header() {
           </ul>
 
           <Link
-            href="/reservations"
+            href="/#reservations"
             className="hidden rounded-full border border-border bg-surface-elevated px-5 py-2 text-sm font-medium tracking-wide text-accent-gold transition-all hover:border-accent-gold/40 hover:bg-accent-gold/10 hover:text-accent-amber md:inline-flex"
           >
-            Reserve a Table
+            Tisch reservieren
           </Link>
 
           <button
@@ -64,7 +66,7 @@ export default function Header() {
             className="inline-flex items-center justify-center rounded-lg border border-border-subtle p-2 text-foreground-muted transition-colors hover:border-border hover:text-accent-gold md:hidden"
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
             onClick={() => setIsOpen((prev) => !prev)}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -85,7 +87,7 @@ export default function Header() {
                 <ul className="flex flex-col gap-1">
                   {NAV_LINKS.map((link, index) => (
                     <motion.li
-                      key={link.href}
+                      key={link.label}
                       initial={{ opacity: 0, x: -12 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}
@@ -101,11 +103,11 @@ export default function Header() {
                   ))}
                 </ul>
                 <Link
-                  href="/reservations"
+                  href="/#reservations"
                   className="mt-3 flex w-full items-center justify-center rounded-full border border-border bg-surface-elevated px-5 py-3 text-sm font-medium tracking-wide text-accent-gold transition-all hover:border-accent-gold/40 hover:bg-accent-gold/10"
                   onClick={() => setIsOpen(false)}
                 >
-                  Reserve a Table
+                  Tisch reservieren
                 </Link>
               </div>
             </motion.div>
