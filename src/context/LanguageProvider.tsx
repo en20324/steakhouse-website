@@ -10,24 +10,24 @@ import {
   type ReactNode,
 } from "react";
 import { DEFAULT_LOCALE, translate } from "@/lib/i18n";
-import type { Locale } from "@/types/menu";
+import type { UILocale } from "@/types/menu";
 
 const STORAGE_KEY = "lasavi-locale";
 
 interface LanguageContextValue {
-  locale: Locale;
-  setLocale: (locale: Locale) => void;
+  locale: UILocale;
+  setLocale: (locale: UILocale) => void;
   t: (key: string) => string;
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function isValidLocale(value: string): value is Locale {
+function isValidLocale(value: string): value is UILocale {
   return value === "de" || value === "en" || value === "tr";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+  const [locale, setLocaleState] = useState<UILocale>(DEFAULT_LOCALE);
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(STORAGE_KEY, locale);
   }, [locale, isHydrated]);
 
-  const setLocale = useCallback((next: Locale) => {
+  const setLocale = useCallback((next: UILocale) => {
     setLocaleState(next);
   }, []);
 

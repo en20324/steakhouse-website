@@ -1,9 +1,8 @@
 "use client";
 
 import QRCode from "react-qr-code";
+import { MENU_QR_URL, getMenuQrDisplayUrl } from "@/lib/data";
 import { useLanguage } from "@/context/LanguageProvider";
-
-const MENU_URL = "https://lasavi.de/menu";
 
 export default function QRCodeBlock() {
   const { t } = useLanguage();
@@ -13,7 +12,7 @@ export default function QRCodeBlock() {
       <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:gap-8 sm:text-left">
         <div className="rounded-xl border border-border-subtle bg-white p-4 shadow-[0_0_24px_rgba(212,175,55,0.12)]">
           <QRCode
-            value={MENU_URL}
+            value={MENU_QR_URL}
             size={128}
             level="M"
             bgColor="#ffffff"
@@ -28,8 +27,8 @@ export default function QRCodeBlock() {
           <p className="mt-2 text-sm leading-relaxed text-foreground-muted">
             {t("qr.subtitle")}
           </p>
-          <p className="mt-3 font-medium tracking-wide text-accent-gold">
-            {t("qr.url")}
+          <p className="mt-3 font-medium tracking-wide text-[#D4AF37]">
+            {getMenuQrDisplayUrl()}
           </p>
         </div>
       </div>

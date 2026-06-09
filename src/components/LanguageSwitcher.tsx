@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { LOCALES } from "@/lib/i18n";
 import { useLanguage } from "@/context/LanguageProvider";
-import type { Locale } from "@/types/menu";
+import type { UILocale } from "@/types/menu";
 import { cn } from "@/lib/utils";
 
 export default function LanguageSwitcher({ className }: { className?: string }) {
@@ -12,7 +11,7 @@ export default function LanguageSwitcher({ className }: { className?: string }) 
   return (
     <div
       className={cn(
-        "relative flex items-center rounded-full border border-border-subtle bg-surface-elevated p-0.5",
+        "relative flex items-center rounded-full border border-border-subtle bg-surface-elevated/90 p-0.5 backdrop-blur-sm",
         className
       )}
       role="group"
@@ -20,26 +19,20 @@ export default function LanguageSwitcher({ className }: { className?: string }) 
     >
       {LOCALES.map(({ code, label }) => {
         const isActive = locale === code;
+
         return (
           <button
             key={code}
             type="button"
-            onClick={() => setLocale(code as Locale)}
+            onClick={() => setLocale(code as UILocale)}
             className={cn(
-              "relative z-10 rounded-full px-2.5 py-1 text-[0.65rem] font-semibold tracking-wider transition-colors sm:px-3 sm:text-xs",
+              "relative rounded-full px-2.5 py-1 text-[0.65rem] font-semibold tracking-wider transition-all duration-300 sm:px-3 sm:text-xs",
               isActive
-                ? "text-[#1a1408]"
-                : "text-foreground-muted hover:text-foreground"
+                ? "bg-[#f5f5f0] text-[#1a1408] shadow-[0_0_16px_rgba(212,175,55,0.35)] ring-1 ring-[#D4AF37]/70"
+                : "text-foreground-muted hover:text-[#D4AF37]"
             )}
             aria-pressed={isActive}
           >
-            {isActive && (
-              <motion.span
-                layoutId="lang-pill"
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-gold-light via-accent-gold to-accent-gold-light"
-                transition={{ type: "spring", stiffness: 400, damping: 32 }}
-              />
-            )}
             <span className="relative z-10">{label}</span>
           </button>
         );

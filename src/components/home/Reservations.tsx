@@ -41,6 +41,26 @@ interface ReservationsProps {
   standalone?: boolean;
 }
 
+function RequiredLabel({
+  htmlFor,
+  children,
+  requiredHint,
+}: {
+  htmlFor: string;
+  children: string;
+  requiredHint: string;
+}) {
+  return (
+    <Label htmlFor={htmlFor}>
+      {children}{" "}
+      <span className="text-[#D4AF37]" aria-hidden="true">
+        *
+      </span>
+      <span className="sr-only"> ({requiredHint})</span>
+    </Label>
+  );
+}
+
 export default function Reservations({ standalone = false }: ReservationsProps) {
   const { t } = useLanguage();
   const [form, setForm] = useState<ReservationFormData>(INITIAL_FORM);
@@ -51,6 +71,10 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    if (!event.currentTarget.checkValidity()) {
+      return;
+    }
+
     event.preventDefault();
     setSubmitted(true);
   }
@@ -119,7 +143,12 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-2 sm:col-span-2">
-                  <Label htmlFor="name">{t("reservation.name")}</Label>
+                  <RequiredLabel
+                    htmlFor="name"
+                    requiredHint={t("reservation.required")}
+                  >
+                    {t("reservation.name")}
+                  </RequiredLabel>
                   <Input
                     id="name"
                     name="name"
@@ -133,7 +162,12 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">{t("reservation.email")}</Label>
+                  <RequiredLabel
+                    htmlFor="email"
+                    requiredHint={t("reservation.required")}
+                  >
+                    {t("reservation.email")}
+                  </RequiredLabel>
                   <Input
                     id="email"
                     name="email"
@@ -147,7 +181,12 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone">{t("reservation.phone")}</Label>
+                  <RequiredLabel
+                    htmlFor="phone"
+                    requiredHint={t("reservation.required")}
+                  >
+                    {t("reservation.phone")}
+                  </RequiredLabel>
                   <Input
                     id="phone"
                     name="phone"
@@ -161,7 +200,12 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="date">{t("reservation.date")}</Label>
+                  <RequiredLabel
+                    htmlFor="date"
+                    requiredHint={t("reservation.required")}
+                  >
+                    {t("reservation.date")}
+                  </RequiredLabel>
                   <Input
                     id="date"
                     name="date"
@@ -173,7 +217,12 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="time">{t("reservation.time")}</Label>
+                  <RequiredLabel
+                    htmlFor="time"
+                    requiredHint={t("reservation.required")}
+                  >
+                    {t("reservation.time")}
+                  </RequiredLabel>
                   <Input
                     id="time"
                     name="time"
@@ -185,7 +234,12 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
                 </div>
 
                 <div className="space-y-2 sm:col-span-2">
-                  <Label htmlFor="guests">{t("reservation.guests")}</Label>
+                  <RequiredLabel
+                    htmlFor="guests"
+                    requiredHint={t("reservation.required")}
+                  >
+                    {t("reservation.guests")}
+                  </RequiredLabel>
                   <select
                     id="guests"
                     name="guests"
@@ -205,6 +259,10 @@ export default function Reservations({ standalone = false }: ReservationsProps) 
                   </select>
                 </div>
               </div>
+
+              <p className="border-t border-border-subtle pt-5 text-xs leading-relaxed text-foreground-muted/90 sm:text-sm">
+                {t("reservation.cancellationPolicy")}
+              </p>
 
               <Button type="submit" size="lg" className="w-full">
                 {t("reservation.submit")}

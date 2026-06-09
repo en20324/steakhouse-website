@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Providers } from "@/app/providers";
+import { BUSINESS } from "@/lib/data";
 import { restaurantJsonLd } from "@/lib/seo/restaurant-schema";
 import "./globals.css";
 
@@ -21,18 +22,18 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "La Savi Steakhouse | Premium Steaks & Grill-Spezialitäten in Duisburg",
+  title: "La Savi Steakhouse Duisburg | Premium Fleisch & Grill",
   description:
-    "La Savi Steakhouse in Duisburg — 100 % Halal-zertifiziert. Premium Steaks, Grill-Spezialitäten, Döner & Lammgerichte. Untermauerstraße 4, Mo–Sa 12:00–22:00 Uhr.",
-  metadataBase: new URL("https://www.lasavi.de"),
+    "Erleben Sie meisterhaftes Handwerk am Grill in Duisburg mitten in der Innenstadt. Dry Aged Steaks, Wagyu, und 100% zertifizierter Wet Aged Döner.",
+  metadataBase: new URL(BUSINESS.siteUrl),
   openGraph: {
-    title: "La Savi Steakhouse",
+    title: "La Savi Steakhouse Duisburg | Premium Fleisch & Grill",
     description:
-      "100 % Halal-zertifiziert. Premium Steaks, Grill-Spezialitäten und Halal-Gerichte in Duisburg.",
+      "Erleben Sie meisterhaftes Handwerk am Grill in Duisburg mitten in der Innenstadt. Dry Aged Steaks, Wagyu, und 100% zertifizierter Wet Aged Döner.",
     type: "website",
     locale: "de_DE",
     siteName: "La Savi Steakhouse",
-    url: "https://www.lasavi.de",
+    url: BUSINESS.siteUrl,
   },
 };
 

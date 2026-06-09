@@ -43,6 +43,8 @@
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "name@example.com",
     "phonePlaceholder": "Your phone number",
+    "required": "Required field",
+    "cancellationPolicy": "By submitting your reservation, you accept our reservation terms: Free cancellation or changes are possible up to 24 hours before your appointment. In case of unexcused no-show or late cancellation, we reserve the right to charge a no-show fee.",
     "submit": "Reserve Now",
     "successTitle": "Thank you for your request!",
     "successMessage": "We will confirm your reservation shortly by email or phone.",

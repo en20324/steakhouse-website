@@ -43,6 +43,8 @@
     "namePlaceholder": "Ihr vollständiger Name",
     "emailPlaceholder": "name@beispiel.de",
     "phonePlaceholder": "Ihre Telefonnummer",
+    "required": "Pflichtfeld",
+    "cancellationPolicy": "Mit Absenden der Reservierung akzeptieren Sie unsere Reservierungsbedingungen: Eine kostenfreie Stornierung oder Änderung Ihrer Reservierung ist bis zu 24 Stunden vor dem Termin möglich. Bei unentschuldigtem Nichterscheinen (No-Show) oder einer verspäteten Absage behalten wir uns das Recht vor, eine Ausfallgebühr in Rechnung zu stellen.",
     "submit": "Jetzt Tisch reservieren",
     "successTitle": "Vielen Dank für Ihre Anfrage!",
     "successMessage": "Wir bestätigen Ihre Reservierung in Kürze per E-Mail oder Telefon.",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,9 +8,12 @@ import { FileText, Search } from "lucide-react";
 import { MENU_DATA, formatPrice } from "@/lib/data";
 import { useLanguage } from "@/context/LanguageProvider";
 import { Input } from "@/components/ui/input";
-import type { Locale } from "@/types/menu";
+import { resolveLocalized } from "@/types/menu";
 
 const EASE_PREMIUM = [0.16, 1, 0.3, 1] as const;
+
+const MENU_IMAGE_FALLBACK =
+  "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800&auto=format&fit=crop";
 
 interface MenuPageContentProps {
   showHeader?: boolean;
@@ -35,12 +38,8 @@ export default function MenuPageContent({
       if (!query) return matchesCategory;
 
       const searchable = [
-        item.name.de,
-        item.name.en,
-        item.name.tr,
-        item.description.de,
-        item.description.en,
-        item.description.tr,
+        ...Object.values(item.name),
+        ...Object.values(item.description),
         item.number,
       ]
         .join(" ")
@@ -49,8 +48,6 @@ export default function MenuPageContent({
       return matchesCategory && searchable.includes(query);
     });
   }, [search, activeCategory]);
-
-  const getLocalized = (obj: Record<Locale, string>) => obj[locale] ?? obj.de;
 
   return (
     <section
@@ -120,7 +117,7 @@ export default function MenuPageContent({
           {MENU_DATA.categories.map((category) => (
             <CategoryPill
               key={category.id}
-              label={getLocalized(category.name)}
+              label={resolveLocalized(category.name, locale)}
               isActive={activeCategory === category.id}
               onClick={() => setActiveCategory(category.id)}
             />
@@ -155,12 +152,9 @@ export default function MenuPageContent({
                   className="group relative flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface shadow-[0_4px_24px_rgba(0,0,0,0.35)] transition-[border-color,box-shadow,transform] duration-500 hover:-translate-y-1.5 hover:border-accent-gold/35 hover:shadow-[0_12px_40px_rgba(0,0,0,0.5),0_0_32px_rgba(212,175,55,0.12)]"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-surface-elevated">
-                    <Image
+                    <DishImage
                       src={item.image}
-                      alt={getLocalized(item.name)}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      alt={resolveLocalized(item.name, locale)}
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">
@@ -173,10 +167,10 @@ export default function MenuPageContent({
                       </span>
                     </div>
                     <h3 className="mt-2 font-serif text-xl tracking-wide text-foreground transition-colors group-hover:text-accent-gold-light">
-                      {getLocalized(item.name)}
+                      {resolveLocalized(item.name, locale)}
                     </h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground-muted">
-                      {getLocalized(item.description)}
+                      {resolveLocalized(item.description, locale)}
                     </p>
                     {item.allergens.length > 0 && (
                       <p className="mt-3 text-xs text-foreground-muted/70">
@@ -216,6 +210,25 @@ export default function MenuPageContent({
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function DishImage({ src, alt }: { src: string; alt: string }) {
+  const [imgSrc, setImgSrc] = useState(src);
+
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
+
+  return (
+    <Image
+      src={imgSrc}
+      alt={alt}
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      className="object-cover transition-transform duration-700 group-hover:scale-105"
+      onError={() => setImgSrc(MENU_IMAGE_FALLBACK)}
+    />
   );
 }
 

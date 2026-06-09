@@ -9,6 +9,17 @@ export const BUSINESS_ADDRESS = `${BUSINESS.street}, ${BUSINESS.postalCode} ${BU
 
 export const MENU_DATA = menuJson as MenuData;
 
+export const MENU_QR_URL = `${BUSINESS.siteUrl.replace(/\/$/, "")}/menu`;
+
+export function getMenuQrDisplayUrl(): string {
+  try {
+    const { host } = new URL(BUSINESS.siteUrl);
+    return `${host}/menu`;
+  } catch {
+    return "lasavi.de/menu";
+  }
+}
+
 export function formatPrice(price: number, currency: "EUR" = "EUR"): string {
   return new Intl.NumberFormat("de-DE", {
     style: "currency",

@@ -43,6 +43,8 @@
     "namePlaceholder": "Adınız ve soyadınız",
     "emailPlaceholder": "ad@ornek.com",
     "phonePlaceholder": "Telefon numaranız",
+    "required": "Zorunlu alan",
+    "cancellationPolicy": "Rezervasyonu göndererek rezervasyon koşullarımızı kabul etmiş olursunuz: Randevunuzdan 24 saat öncesine kadar ücretsiz iptal veya değişiklik mümkündür. Mazeretsiz gelmeme (No-Show) veya geç iptal durumunda no-show ücreti talep etme hakkımız saklıdır.",
     "submit": "Şimdi Rezervasyon Yap",
     "successTitle": "Talebiniz için teşekkürler!",
     "successMessage": "Rezervasyonunuzu kısa süre içinde e-posta veya telefonla onaylayacağız.",
