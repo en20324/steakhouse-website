@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "La Savi Steakhouse",
     description:
-      "100 % Halal-zertifiziert. Premium Steaks, Grill-Spezialitäten und Halal Dishes in Duisburg.",
+      "100 % Halal-zertifiziert. Premium Steaks, Grill-Spezialitäten und Halal-Gerichte in Duisburg.",
     type: "website",
     locale: "de_DE",
     siteName: "La Savi Steakhouse",

@@ -20,7 +20,7 @@ export interface MenuItem {
 }
 
 export const MENU_CATEGORIES: MenuCategory[] = [
-  { id: "highlights", label: "Highlights" },
+  { id: "highlights", label: "Beliebt" },
   { id: "salate", label: "Salate" },
   { id: "grill-steaks", label: "Grill & Steaks" },
   { id: "nachtisch", label: "Nachtisch" },

@@ -14,9 +14,10 @@ export const BUSINESS = {
   registerCourt: "Amtsgericht Duisburg",
   registerNumber: "HRB XXXXX",
   taxId: "DE363944685",
+  tagline: "Dunkel, modern — gemacht für Gäste mit Geschmack.",
   openingHours: {
-    weekdays: "Montag – Samstag: 12:00 – 22:00 Uhr",
-    sunday: "Sonntag: geschlossen",
+    weekdays: "Montag - Samstag: 12:00 - 22:00 Uhr",
+    sunday: "Sonntag: Geschlossen",
   },
   halalCertified: true,
 } as const;

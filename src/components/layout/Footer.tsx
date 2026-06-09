@@ -7,7 +7,7 @@ import { ImpressumModal, DatenschutzModal } from "@/components/layout/LegalModal
 const FOOTER_LINKS = [
   { href: "/#menu", label: "Speisekarte" },
   { href: "/#reservations", label: "Reservierung" },
-  { href: "/La-Savi-Speisekarte.pdf", label: "Menükarte (PDF)" },
+  { href: "/#reservations", label: "Kontakt" },
 ] as const;
 
 export default function Footer() {
@@ -28,14 +28,13 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-foreground-muted">
-              Premium Steaks, Grill-Spezialitäten und Halal-Gerichte in
-              Duisburg — 100&nbsp;% Halal zertifiziert.
+              {BUSINESS.tagline}
             </p>
           </div>
 
           <div>
             <h3 className="font-serif text-sm tracking-[0.2em] text-accent-gold uppercase">
-              Navigation
+              Entdecken
             </h3>
             <ul className="mt-5 space-y-3">
               {FOOTER_LINKS.map((link) => (
@@ -43,9 +42,6 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     className="text-sm text-foreground-muted transition-colors hover:text-accent-gold"
-                    {...(link.href.endsWith(".pdf")
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
                   >
                     {link.label}
                   </Link>
@@ -56,7 +52,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-serif text-sm tracking-[0.2em] text-accent-gold uppercase">
-              Kontakt
+              Besuchen Sie uns
             </h3>
             <ul className="mt-5 space-y-4">
               <li className="flex gap-3 text-sm text-foreground-muted">
@@ -113,8 +109,8 @@ export default function Footer() {
             &copy; {currentYear} {BUSINESS.legalName}. Alle Rechte vorbehalten.
           </p>
           <div className="flex items-center gap-6">
-            <ImpressumModal />
             <DatenschutzModal />
+            <ImpressumModal />
           </div>
         </div>
 

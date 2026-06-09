@@ -7,19 +7,19 @@ import { ChevronDown } from "lucide-react";
 
 const EASE_PREMIUM = [0.16, 1, 0.3, 1] as const;
 
-const HEADLINE = "Artisan Steaks. Unforgettable Nights.";
+const HEADLINE = "Kunstvolle Steaks. Unvergessliche Abende.";
 const WORDS = HEADLINE.split(" ");
 
 const HERO_IMAGE = {
   src: "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2400&auto=format&fit=crop",
-  alt: "Premium dry-aged steak sizzling on an open flame grill",
+  alt: "Premium-Steak auf offener Flamme grilliert",
 } as const;
 
 export default function Hero() {
   return (
     <section
       className="relative -mt-28 flex min-h-[100dvh] w-full items-center justify-center overflow-hidden"
-      aria-label="Welcome to The Prime Cut Steakhouse"
+      aria-label="Willkommen bei La Savi Steakhouse"
     >
       {/* Ken Burns background */}
       <div className="absolute inset-0 bg-background">
@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: EASE_PREMIUM, delay: 0.15 }}
           className="text-xs font-medium uppercase tracking-[0.45em] text-accent-gold sm:text-sm"
         >
-          The Prime Cut Steakhouse
+          La Savi Steakhouse
         </motion.p>
 
         <h1 className="mt-8 font-serif text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.1] tracking-wide text-foreground">
@@ -93,10 +93,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: EASE_PREMIUM, delay: 1.1 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-foreground-muted sm:text-lg"
+          className="mt-6 max-w-2xl text-base leading-relaxed text-foreground-muted sm:text-lg"
         >
-          Dry-aged perfection, open-flame mastery, and evenings crafted for
-          those who demand the extraordinary.
+          Perfektionierte Steaks, meisterhaftes Handwerk am Grill und
+          unvergessliche Abende für alle, die das Außergewöhnliche suchen.
         </motion.p>
 
         <motion.div
@@ -106,10 +106,10 @@ export default function Hero() {
           className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5"
         >
           <Link
-            href="/menu"
+            href="/#menu"
             className="group relative w-full overflow-hidden rounded-full border border-accent-gold/35 bg-black/25 px-8 py-3.5 text-sm font-medium tracking-[0.12em] text-foreground backdrop-blur-sm transition-[box-shadow,border-color] duration-500 hover:border-accent-gold/60 hover:shadow-[0_0_32px_rgba(212,175,55,0.22)] sm:w-auto"
           >
-            <span className="relative z-10">Explore Menu</span>
+            <span className="relative z-10">Speisekarte</span>
             <span
               className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               style={{
@@ -121,10 +121,10 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/reservations"
+            href="/#reservations"
             className="w-full rounded-full bg-gradient-to-r from-accent-gold-light via-accent-gold to-accent-gold-light px-8 py-3.5 text-sm font-semibold tracking-[0.12em] text-[#1a1408] shadow-[0_4px_24px_rgba(212,175,55,0.28)] transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-[0_6px_36px_rgba(212,175,55,0.42)] active:scale-[0.98] sm:w-auto"
           >
-            Book a Table
+            Tisch reservieren
           </Link>
         </motion.div>
       </div>
@@ -147,7 +147,7 @@ export default function Hero() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-[0.65rem] font-medium uppercase tracking-[0.35em] text-foreground-muted/70">
-            Scroll
+            Weiter
           </span>
           <div className="flex h-10 w-6 items-start justify-center rounded-full border border-foreground-muted/30 p-1.5">
             <motion.span
