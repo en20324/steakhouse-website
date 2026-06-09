@@ -96,7 +96,7 @@ export default function Hero() {
           className="mt-6 max-w-2xl text-base leading-relaxed text-foreground-muted sm:text-lg"
         >
           Perfektionierte Steaks, meisterhaftes Handwerk am Grill und
-          unvergessliche Abende für alle, die das Außergewöhnliche suchen.
+          unvergessliche Abende.
         </motion.p>
 
         <motion.div
