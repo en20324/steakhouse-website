@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { FaApple } from "react-icons/fa";
-import { SiGooglemaps } from "react-icons/si";
 import { BUSINESS } from "@/lib/data";
 import {
   detectPreferredMapProvider,
@@ -17,8 +16,8 @@ import {
 export const BIO_LINK_CLASSNAME =
   "flex w-full items-center justify-center gap-3 rounded-2xl border border-accent-gold/45 bg-surface/80 px-5 py-4 text-center text-sm font-medium tracking-wide text-foreground shadow-[0_0_0_1px_rgba(212,175,55,0.08),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-accent-gold hover:bg-accent-gold/10 hover:text-accent-gold hover:shadow-[0_0_24px_rgba(212,175,55,0.18)] active:scale-[0.98] sm:text-base";
 
-const MAP_ICON_BUTTON_CLASSNAME =
-  "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[rgba(212,175,55,0.45)] bg-surface/40 backdrop-blur-sm transition-all duration-300 hover:border-accent-gold/70 hover:bg-accent-gold/[0.08] hover:shadow-[0_0_20px_rgba(212,175,55,0.28)] active:scale-[0.96]";
+const MAP_APP_ICON_LINK_CLASSNAME =
+  "inline-flex shrink-0 transition-transform duration-200 hover:scale-105";
 
 const STATIC_LINKS = [
   { href: "/menu", label: "📜 Speisekarte öffnen", external: false as const },
@@ -59,7 +58,7 @@ function ExternalBioLink({ href, label, ariaLabel }: ExternalBioLinkProps) {
   );
 }
 
-function MapProviderIconButton({
+function MapAppIconLink({
   href,
   ariaLabel,
   children,
@@ -71,7 +70,7 @@ function MapProviderIconButton({
   return (
     <a
       href={href}
-      className={MAP_ICON_BUTTON_CLASSNAME}
+      className={MAP_APP_ICON_LINK_CLASSNAME}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
@@ -116,23 +115,34 @@ export default function BioNavigation() {
         ariaLabel={`Anfahrt planen — öffnet ${primaryMapLabel}`}
       />
 
-      <div className="mt-3 flex items-center justify-center gap-3.5">
-        <MapProviderIconButton
+      <div className="mt-3 flex items-center justify-center gap-5">
+        <MapAppIconLink
           href={getAppleMapsUrl()}
           ariaLabel="In Apple Karten öffnen"
         >
-          <FaApple className="h-5 w-5 text-accent-gold" aria-hidden />
-        </MapProviderIconButton>
+          <Image
+            src="/apple-maps-icon.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-[22%] object-cover"
+            aria-hidden
+          />
+        </MapAppIconLink>
 
-        <MapProviderIconButton
+        <MapAppIconLink
           href={getGoogleMapsUrl()}
           ariaLabel="In Google Maps öffnen"
         >
-          <SiGooglemaps
-            className="h-5 w-5 opacity-85 saturate-[0.85]"
+          <Image
+            src="/google-maps-icon.jpg"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain"
             aria-hidden
           />
-        </MapProviderIconButton>
+        </MapAppIconLink>
       </div>
     </nav>
   );
