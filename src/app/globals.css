@@ -102,12 +102,6 @@ a {
   text-decoration: none;
 }
 
-/* Bio page — cross-browser map icon gold treatment */
-.bio-map-icon-button {
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
 .bio-action-link {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
