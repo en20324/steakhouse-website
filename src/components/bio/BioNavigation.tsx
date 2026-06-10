@@ -15,8 +15,11 @@ import {
 import { BUSINESS } from "@/lib/data";
 import { getAppleMapsUrl, getGoogleMapsUrl } from "@/lib/maps";
 
+/** Shared corner radius for every bio action button (incl. map buttons). */
+export const BIO_BUTTON_ROUNDING = "rounded-2xl";
+
 export const BIO_LINK_CLASSNAME =
-  "bio-action-link flex h-[52px] w-full items-center justify-center rounded-2xl border border-accent-gold/45 bg-surface/80 px-5 text-sm font-medium tracking-wide text-foreground shadow-[0_0_0_1px_rgba(212,175,55,0.08),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-accent-gold hover:bg-accent-gold/10 hover:text-accent-gold hover:shadow-[0_0_24px_rgba(212,175,55,0.22)] active:scale-[0.98] motion-safe:hover:scale-[1.01] sm:text-base";
+  `bio-action-link flex h-[52px] w-full items-center justify-center ${BIO_BUTTON_ROUNDING} border border-accent-gold/45 bg-surface/80 px-5 text-sm font-medium tracking-wide text-foreground shadow-[0_0_0_1px_rgba(212,175,55,0.08),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-accent-gold hover:bg-accent-gold/10 hover:text-accent-gold hover:shadow-[0_0_24px_rgba(212,175,55,0.22)] active:scale-[0.98] motion-safe:hover:scale-[1.01] sm:text-base`;
 
 const BIO_ICON_WRAPPER_CLASSNAME =
   "mr-3 flex h-[18px] w-[18px] shrink-0 items-center justify-center text-accent-gold";
@@ -130,14 +133,18 @@ export default function BioNavigation() {
       <ExternalBioLink
         href={getAppleMapsUrl()}
         label="Apple Karten"
-        icon={<AppleMapsGoldIcon className="h-[18px] w-[18px]" />}
+        icon={
+          <AppleMapsGoldIcon className="h-[18px] w-[18px] shrink-0 [shape-rendering:geometricPrecision]" />
+        }
         ariaLabel="In Apple Karten öffnen"
       />
 
       <ExternalBioLink
         href={getGoogleMapsUrl()}
         label="Google Maps"
-        icon={<GoogleMapsGoldIcon className="h-[18px] w-[18px]" />}
+        icon={
+          <GoogleMapsGoldIcon className="h-[18px] w-[18px] shrink-0 [shape-rendering:geometricPrecision]" />
+        }
         ariaLabel="In Google Maps öffnen"
       />
 

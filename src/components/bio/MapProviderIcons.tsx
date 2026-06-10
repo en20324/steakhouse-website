@@ -9,6 +9,7 @@ export function AppleMapsGoldIcon({ className, ...props }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      shapeRendering="geometricPrecision"
       aria-hidden
       {...props}
     >
@@ -54,6 +55,7 @@ export function GoogleMapsGoldIcon({ className, ...props }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      shapeRendering="geometricPrecision"
       aria-hidden
       {...props}
     >

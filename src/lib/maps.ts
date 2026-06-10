@@ -4,13 +4,26 @@ export const NAVIGATION_PLACE_NAME = BUSINESS.name;
 export const NAVIGATION_ADDRESS = BUSINESS_ADDRESS;
 export const NAVIGATION_QUERY = `${NAVIGATION_PLACE_NAME}, ${NAVIGATION_ADDRESS}`;
 
+/** Google Maps search tuned to open the La Savi business profile card. */
+export const GOOGLE_MAPS_SEARCH_QUERY =
+  "La Savi Duisburg Untermauerstrasse 4";
+
+/** Apple Maps business name + address parameters for place lookup. */
+export const APPLE_MAPS_SEARCH_NAME = "La Savi Steakhouse Duisburg";
+export const APPLE_MAPS_ADDRESS_PARAM = `Untermauerstrasse 4,${BUSINESS.postalCode} ${BUSINESS.city}`;
+
 export type MapProvider = "apple" | "google";
 
-export function getAppleMapsUrl(query: string = NAVIGATION_QUERY): string {
-  return `https://maps.apple.com/?q=${encodeURIComponent(query)}`;
+export function getAppleMapsUrl(
+  searchName: string = APPLE_MAPS_SEARCH_NAME,
+  address: string = APPLE_MAPS_ADDRESS_PARAM
+): string {
+  return `https://maps.apple.com/?q=${encodeURIComponent(searchName)}&address=${encodeURIComponent(address)}`;
 }
 
-export function getGoogleMapsUrl(query: string = NAVIGATION_QUERY): string {
+export function getGoogleMapsUrl(
+  query: string = GOOGLE_MAPS_SEARCH_QUERY
+): string {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
@@ -44,13 +57,10 @@ export function detectPreferredMapProvider(userAgent: string): MapProvider {
   return "google";
 }
 
-export function getPreferredMapUrl(
-  userAgent: string,
-  query: string = NAVIGATION_QUERY
-): string {
+export function getPreferredMapUrl(userAgent: string): string {
   return detectPreferredMapProvider(userAgent) === "apple"
-    ? getAppleMapsUrl(query)
-    : getGoogleMapsUrl(query);
+    ? getAppleMapsUrl()
+    : getGoogleMapsUrl();
 }
 
 export function getMapProviderLabel(provider: MapProvider): string {
