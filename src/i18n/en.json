@@ -19,7 +19,8 @@
   "menu": {
     "eyebrow": "La Savi Steakhouse",
     "title": "Our Menu",
-    "subtitle": "Premium steaks, grill specialties and halal dishes — handpicked and prepared with passion.",
+    "subtitle": "Premium steaks, wet aged döner, grill specialties and halal dishes — over 60 dishes available digitally.",
+    "tags": "Tags",
     "halalBadge": "100% Halal certified",
     "searchPlaceholder": "Search dishes…",
     "allCategories": "All",

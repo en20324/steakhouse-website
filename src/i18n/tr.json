@@ -19,7 +19,8 @@
   "menu": {
     "eyebrow": "La Savi Steakhouse",
     "title": "Menümüz",
-    "subtitle": "Premium steaks, ızgara spesiyalleri ve helal yemekler — özenle seçilmiş ve tutkuyla hazırlanmış.",
+    "subtitle": "Premium steaks, wet aged döner, ızgara spesiyalleri ve helal yemekler — 60'tan fazla dijital menü.",
+    "tags": "Etiketler",
     "halalBadge": "%100 Helal sertifikalı",
     "searchPlaceholder": "Yemek ara…",
     "allCategories": "Tümü",

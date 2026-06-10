@@ -33,7 +33,11 @@ export default function MenuPageContent({
 
     return MENU_DATA.items.filter((item) => {
       const matchesCategory =
-        activeCategory === "all" || item.category === activeCategory;
+        activeCategory === "all"
+          ? true
+          : activeCategory === "highlights"
+            ? item.tags.includes("bestseller") || item.tags.includes("premium")
+            : item.category === activeCategory;
 
       if (!query) return matchesCategory;
 

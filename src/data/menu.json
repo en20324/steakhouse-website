@@ -16,6 +16,36 @@
       }
     },
     {
+      "id": "tagesgerichte",
+      "name": {
+        "de": "Tagesgerichte",
+        "en": "Daily Specials",
+        "tr": "Günün Yemekleri",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "suppen",
+      "name": {
+        "de": "Suppen",
+        "en": "Soups",
+        "tr": "Çorbalar",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
       "id": "salate",
       "name": {
         "de": "Salate",
@@ -31,11 +61,116 @@
       }
     },
     {
-      "id": "grill-steaks",
+      "id": "wet-aged-doner",
       "name": {
-        "de": "Grill & Steaks",
-        "en": "Grill & Steaks",
-        "tr": "Izgara & Steaks",
+        "de": "Wet Aged Spezial Döner",
+        "en": "Wet Aged Special Döner",
+        "tr": "Wet Aged Özel Döner",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "grillgerichte",
+      "name": {
+        "de": "Grillgerichte",
+        "en": "Grill Dishes",
+        "tr": "Izgara Yemekleri",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "steakspezialitaeten",
+      "name": {
+        "de": "Steakspezialitäten",
+        "en": "Beef Steaks",
+        "tr": "Dana Steaks",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "buffalo-steaks",
+      "name": {
+        "de": "Büffel Steaks",
+        "en": "Buffalo Steaks",
+        "tr": "Manda Steaks",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "wagyu-steaks",
+      "name": {
+        "de": "Wagyu Steaks",
+        "en": "Wagyu Steaks",
+        "tr": "Wagyu Steaks",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "teiggerichte",
+      "name": {
+        "de": "Teiggerichte",
+        "en": "Pastry Dishes",
+        "tr": "Hamur İşleri",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "beilagen",
+      "name": {
+        "de": "Beilagen",
+        "en": "Side Dishes",
+        "tr": "Garnitürler",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
+    },
+    {
+      "id": "saucen",
+      "name": {
+        "de": "Saucen",
+        "en": "Sauces",
+        "tr": "Soslar",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -59,19 +194,34 @@
         "es": "",
         "it": ""
       }
+    },
+    {
+      "id": "getraenke",
+      "name": {
+        "de": "Getränke",
+        "en": "Beverages",
+        "tr": "İçecekler",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      }
     }
   ],
   "items": [
     {
-      "id": "02",
-      "number": "02",
-      "category": "salate",
-      "price": 7.9,
+      "id": "001",
+      "number": "1",
+      "category": "tagesgerichte",
+      "price": 14.9,
       "currency": "EUR",
       "name": {
-        "de": "Hirtensalat-Feta Käse",
-        "en": "Shepherd's Salad with Feta",
-        "tr": "Çoban Salatası — Feta Peynirli",
+        "de": "Menü 2 — Hähnchen Tontopf",
+        "en": "Menu 2 — Chicken Pot",
+        "tr": "Menü 2 — Tavuk Tencere",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -81,7 +231,380 @@
         "it": ""
       },
       "description": {
-        "de": "Mit Granatapfeldressing oder Kräuterdressing — frisch und aromatisch.",
+        "de": "Hähnchen Tontopf mit Beilage nach Wahl und Brotstreifen.",
+        "en": "Chicken pot served with side of choice and bread.",
+        "tr": "Seçilen garnitür ve ekmek ile tavuk tencere.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/menue-2-haehnchen-tontopf.webp"
+    },
+    {
+      "id": "002",
+      "number": "2",
+      "category": "tagesgerichte",
+      "price": 23.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Menü 4 — Garnelen Tontopf",
+        "en": "Menu 4 — Prawn Pot",
+        "tr": "Menü 4 — Karides Tencere",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Garnelen Tontopf mit Beilage nach Wahl und Brotstreifen.",
+        "en": "Prawn pot served with side of choice and bread.",
+        "tr": "Seçilen garnitür ve ekmek ile karides tencere.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [
+        "B",
+        "R"
+      ],
+      "image": "/images/menu/menue-4-garnelen-tontopf.webp"
+    },
+    {
+      "id": "003",
+      "number": "3",
+      "category": "tagesgerichte",
+      "price": 17.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Menü 1 — Lammfleisch Tontopf",
+        "en": "Menu 1 — Lamb Pot",
+        "tr": "Menü 1 — Kuzu Tencere",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Lammfleisch Tontopf mit Beilage nach Wahl und Brotstreifen.",
+        "en": "Lamb pot served with side of choice and bread.",
+        "tr": "Seçilen garnitür ve ekmek ile kuzu tencere.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/menue-1-lammfleisch-tontopf.webp"
+    },
+    {
+      "id": "004",
+      "number": "4",
+      "category": "tagesgerichte",
+      "price": 12.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Menü 5 — Gemüse Tontopf",
+        "en": "Menu 5 — Vegetable Pot",
+        "tr": "Menü 5 — Sebze Tencere",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Gemüse Tontopf mit Beilage nach Wahl und Brotstreifen.",
+        "en": "Vegetable pot served with side of choice and bread.",
+        "tr": "Seçilen garnitür ve ekmek ile sebze tencere.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [],
+      "image": "/images/menu/menue-5-gemuese-tontopf.webp"
+    },
+    {
+      "id": "005",
+      "number": "5",
+      "category": "tagesgerichte",
+      "price": 15.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Menü 3 — Lammfrikadellen Tontopf",
+        "en": "Menu 3 — Lamb Meatball Pot",
+        "tr": "Menü 3 — Kuzu Köfte Tencere",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Lammfrikadellen Tontopf mit Beilage nach Wahl und Brotstreifen.",
+        "en": "Lamb meatball pot with side of choice and bread.",
+        "tr": "Seçilen garnitür ve ekmek ile kuzu köfte tencere.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "C"
+      ],
+      "image": "/images/menu/menue-3-lammfrikadellen-tontopf.webp"
+    },
+    {
+      "id": "006",
+      "number": "6",
+      "category": "suppen",
+      "price": 5.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Linsensuppe",
+        "en": "Lentil Soup",
+        "tr": "Mercimek Çorbası",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Wärmende Suppe aus roten Linsen, aromatisch gewürzt und cremig.",
+        "en": "Warming red lentil soup, aromatic and creamy.",
+        "tr": "Kırmızı mercimekten aromatik, kremsi çorba.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "L"
+      ],
+      "image": "/images/menu/linsensuppe.webp"
+    },
+    {
+      "id": "007",
+      "number": "7",
+      "category": "suppen",
+      "price": 7.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lammfleischsuppe",
+        "en": "Lamb Soup",
+        "tr": "Kuzu Çorbası",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Herzhafte Suppe mit zartem Lammfleisch, Gemüse und Kräutern.",
+        "en": "Hearty soup with tender lamb, vegetables and herbs.",
+        "tr": "Yumuşak kuzu eti, sebze ve otlarla çorba.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "L"
+      ],
+      "image": "/images/menu/lammfleischsuppe.webp"
+    },
+    {
+      "id": "008",
+      "number": "8",
+      "category": "suppen",
+      "price": 6.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hähnchensuppe",
+        "en": "Chicken Soup",
+        "tr": "Tavuk Çorbası",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Wärmende Suppe mit zartem Hähnchenfleisch und feinem Gemüse.",
+        "en": "Warming soup with tender chicken and vegetables.",
+        "tr": "Yumuşak tavuk eti ve sebzelerle çorba.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "L"
+      ],
+      "image": "/images/menu/haehnchensuppe.webp"
+    },
+    {
+      "id": "009",
+      "number": "9",
+      "category": "salate",
+      "price": 5.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hirtensalat",
+        "en": "Shepherd's Salad",
+        "tr": "Çoban Salatası",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Frischer Salat mit Tomaten, Gurken, Zwiebeln, Paprika und Feta.",
+        "en": "Fresh salad with tomatoes, cucumber, onion, pepper and feta.",
+        "tr": "Domates, salatalık, soğan, biber ve feta ile taze salata.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian",
+        "bestseller"
+      ],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/hirtensalat.webp"
+    },
+    {
+      "id": "010",
+      "number": "10",
+      "category": "salate",
+      "price": 8.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Kräuter-Blätter-Salat",
+        "en": "Herb Leaf Salad",
+        "tr": "Ot Yapraklı Salata",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Leichter Salat mit verschiedenen Blattsalaten und frischen Kräutern.",
+        "en": "Light salad with mixed leaves and fresh herbs.",
+        "tr": "Karışık yeşillikler ve taze otlarla hafif salata.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [],
+      "image": "/images/menu/kraeuter-blaetter-salat.webp"
+    },
+    {
+      "id": "011",
+      "number": "11",
+      "category": "salate",
+      "price": 7.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hirtensalat-Feta Käse",
+        "en": "Shepherd's Salad with Feta",
+        "tr": "Feta Peynirli Çoban Salatası",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Granatapfel- oder Kräuterdressing — frisch und aromatisch.",
         "en": "With pomegranate or herb dressing — fresh and aromatic.",
         "tr": "Nar veya ot sosu ile — taze ve aromatik.",
         "fr": "",
@@ -92,20 +615,25 @@
         "es": "",
         "it": ""
       },
-      "tags": ["vegetarian", "bestseller"],
-      "allergens": ["milch"],
-      "image": "/images/menu/dish-02.webp"
+      "tags": [
+        "vegetarian",
+        "bestseller"
+      ],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/hirtensalat-feta-kaese.webp"
     },
     {
-      "id": "05",
-      "number": "05",
+      "id": "012",
+      "number": "12",
       "category": "salate",
       "price": 11.9,
       "currency": "EUR",
       "name": {
         "de": "Kräuter Blätter Salat-Büffelmozzarella",
-        "en": "Herb Leaf Salad with Buffalo Mozzarella",
-        "tr": "Ot Yapraklı Salata — Manda Mozzarella",
+        "en": "Herb Salad with Buffalo Mozzarella",
+        "tr": "Manda Mozzarellalı Ot Salatası",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -115,8 +643,8 @@
         "it": ""
       },
       "description": {
-        "de": "Frische Kräuterblätter mit cremigem Büffelmozzarella und feinem Dressing.",
-        "en": "Fresh herb leaves with creamy buffalo mozzarella and fine dressing.",
+        "de": "Frische Kräuterblätter mit cremigem Büffelmozzarella.",
+        "en": "Fresh herb leaves with creamy buffalo mozzarella.",
         "tr": "Kremsi manda mozzarellalı taze ot yapraklı salata.",
         "fr": "",
         "nl": "",
@@ -126,18 +654,372 @@
         "es": "",
         "it": ""
       },
-      "tags": ["vegetarian"],
-      "allergens": ["milch"],
-      "image": "/images/menu/dish-05.webp"
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/kraeuter-blaetter-salat-bueffelmozzarella.webp"
     },
     {
-      "id": "22",
-      "number": "22",
-      "category": "grill-steaks",
-      "price": 23.9,
+      "id": "013",
+      "number": "13",
+      "category": "wet-aged-doner",
+      "price": 7.9,
       "currency": "EUR",
       "name": {
-        "de": "Gemischter Grill Teller Mixed",
+        "de": "Pommes Döner",
+        "en": "Fries Döner",
+        "tr": "Patates Döner",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Pommes frites mit saftigem Wet Aged Dönerfleisch.",
+        "en": "Crispy fries topped with wet aged döner meat.",
+        "tr": "Wet aged döner eti ile patates kızartması.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "bestseller"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/pommes-doener.webp"
+    },
+    {
+      "id": "014",
+      "number": "14",
+      "category": "wet-aged-doner",
+      "price": 16.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Iskender Döner",
+        "en": "Wet Aged Iskender Döner",
+        "tr": "Wet Aged İskender Döner",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Joghurtsauce, Butter und Tomatensoße — ein Klassiker.",
+        "en": "With yogurt sauce, butter and tomato sauce — a classic.",
+        "tr": "Yoğurt sosu, tereyağı ve domates sosu ile klasik lezzet.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "bestseller"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-iskender-doener.webp"
+    },
+    {
+      "id": "015",
+      "number": "15",
+      "category": "wet-aged-doner",
+      "price": 10.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Kalb Dürüm Döner",
+        "en": "Wet Aged Veal Dürüm",
+        "tr": "Wet Aged Dana Dürüm",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Im Dürüm mit frischem Salat.",
+        "en": "Wrapped dürüm with fresh salad.",
+        "tr": "Taze salata ile dürüm.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-kalb-dueruem-doener.webp"
+    },
+    {
+      "id": "016",
+      "number": "16",
+      "category": "wet-aged-doner",
+      "price": 9.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Kalb Döner",
+        "en": "Wet Aged Veal Döner",
+        "tr": "Wet Aged Dana Döner",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Im Brot — hausgemacht und saftig.",
+        "en": "In bread — homemade and juicy.",
+        "tr": "Ekmek arası — ev yapımı ve sulu.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "bestseller"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-kalb-doener.webp"
+    },
+    {
+      "id": "017",
+      "number": "17",
+      "category": "wet-aged-doner",
+      "price": 15.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Kalb Döner Teller",
+        "en": "Wet Aged Veal Döner Plate",
+        "tr": "Wet Aged Dana Döner Tabağı",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Salat und Beilage nach Wahl.",
+        "en": "With salad and side of choice.",
+        "tr": "Salata ve seçilen garnitür ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-kalb-doener-teller.webp"
+    },
+    {
+      "id": "018",
+      "number": "18",
+      "category": "wet-aged-doner",
+      "price": 9.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Hähnchen Döner",
+        "en": "Wet Aged Chicken Döner",
+        "tr": "Wet Aged Tavuk Döner",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Im Brot — zart und aromatisch.",
+        "en": "In bread — tender and aromatic.",
+        "tr": "Ekmek arası — yumuşak ve aromatik.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-haehnchen-doener.webp"
+    },
+    {
+      "id": "019",
+      "number": "19",
+      "category": "wet-aged-doner",
+      "price": 15.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Hähnchen Döner Teller",
+        "en": "Wet Aged Chicken Döner Plate",
+        "tr": "Wet Aged Tavuk Döner Tabağı",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Salat und Beilage nach Wahl.",
+        "en": "With salad and side of choice.",
+        "tr": "Salata ve seçilen garnitür ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-haehnchen-doener-teller.webp"
+    },
+    {
+      "id": "020",
+      "number": "20",
+      "category": "wet-aged-doner",
+      "price": 10.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Wet Aged Hähnchen Dürüm Döner",
+        "en": "Wet Aged Chicken Dürüm",
+        "tr": "Wet Aged Tavuk Dürüm",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Im Dürüm mit frischem Salat.",
+        "en": "Dürüm wrap with fresh salad.",
+        "tr": "Taze salata ile dürüm.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/wet-aged-haehnchen-dueruem-doener.webp"
+    },
+    {
+      "id": "021",
+      "number": "21",
+      "category": "grillgerichte",
+      "price": 24.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lammkotelett",
+        "en": "Lamb Chops",
+        "tr": "Kuzu Pirzola",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Vom Grill mit Beilage nach Wahl.",
+        "en": "From the grill with side of choice.",
+        "tr": "Izgaradan, seçilen garnitür ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/lammkotelett.webp"
+    },
+    {
+      "id": "022",
+      "number": "22",
+      "category": "grillgerichte",
+      "price": 24.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Gemischter Grill Teller",
         "en": "Mixed Grill Plate",
         "tr": "Karışık Izgara Tabağı",
         "fr": "",
@@ -149,9 +1031,9 @@
         "it": ""
       },
       "description": {
-        "de": "Auswahl unserer besten Grill-Spezialitäten — vom offenen Feuer, halal zubereitet.",
-        "en": "Selection of our finest grill specialties — halal prepared over open flame.",
-        "tr": "En iyi ızgara spesiyallerimizden seçme — helal, açık ateşte.",
+        "de": "Auswahl unserer Grill-Spezialitäten mit Beilage nach Wahl.",
+        "en": "Selection of grill specialties with side of choice.",
+        "tr": "Izgara spesiyalleri seçkisi, garnitür ile.",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -160,14 +1042,463 @@
         "es": "",
         "it": ""
       },
-      "tags": ["halal", "bestseller"],
+      "tags": [
+        "halal",
+        "bestseller"
+      ],
       "allergens": [],
-      "image": "/images/menu/dish-22.webp"
+      "image": "/images/menu/gemischter-grill-teller.webp"
     },
     {
-      "id": "34",
+      "id": "023",
+      "number": "23",
+      "category": "grillgerichte",
+      "price": 19.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Urfa Teller",
+        "en": "Urfa Plate",
+        "tr": "Urfa Tabağı",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit würzigem Hackspieß vom Grill.",
+        "en": "With spiced minced skewer from the grill.",
+        "tr": "Baharatlı kıyma şiş ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/urfa-teller.webp"
+    },
+    {
+      "id": "024",
+      "number": "24",
+      "category": "grillgerichte",
+      "price": 19.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Adana Teller (scharf)",
+        "en": "Adana Plate (spicy)",
+        "tr": "Adana Tabağı (acılı)",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit scharfem Hackspieß vom Grill.",
+        "en": "With spicy minced skewer from the grill.",
+        "tr": "Acılı kıyma şiş ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "spicy"
+      ],
+      "allergens": [],
+      "image": "/images/menu/adana-teller-scharf.webp"
+    },
+    {
+      "id": "025",
+      "number": "25",
+      "category": "grillgerichte",
+      "price": 15.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Frikadellen",
+        "en": "Lamb Meatballs",
+        "tr": "Köfte",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Lammfleisch vom Grill.",
+        "en": "Lamb meatballs from the grill.",
+        "tr": "Izgaradan kuzu köfte.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "C"
+      ],
+      "image": "/images/menu/frikadellen.webp"
+    },
+    {
+      "id": "026",
+      "number": "26",
+      "category": "grillgerichte",
+      "price": 23.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lammspieß Teller",
+        "en": "Lamb Skewer Plate",
+        "tr": "Kuzu Şiş Tabağı",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Beilage nach Wahl.",
+        "en": "With side of choice.",
+        "tr": "Seçilen garnitür ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/lammspiess-teller.webp"
+    },
+    {
+      "id": "027",
+      "number": "27",
+      "category": "grillgerichte",
+      "price": 9.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lammspieß Dürüm",
+        "en": "Lamb Skewer Dürüm",
+        "tr": "Kuzu Şiş Dürüm",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Im Dürüm.",
+        "en": "In dürüm wrap.",
+        "tr": "Dürüm içinde.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/lammspiess-dueruem.webp"
+    },
+    {
+      "id": "028",
+      "number": "28",
+      "category": "grillgerichte",
+      "price": 9.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hähnchenspieß Dürüm",
+        "en": "Chicken Skewer Dürüm",
+        "tr": "Tavuk Şiş Dürüm",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Im Dürüm.",
+        "en": "In dürüm wrap.",
+        "tr": "Dürüm içinde.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/haehnchenspiess-dueruem.webp"
+    },
+    {
+      "id": "029",
+      "number": "29",
+      "category": "grillgerichte",
+      "price": 9.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Adana Dürüm",
+        "en": "Adana Dürüm",
+        "tr": "Adana Dürüm",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Hackspieß im Dürüm.",
+        "en": "Minced skewer in dürüm.",
+        "tr": "Kıyma şişli dürüm.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "spicy"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/adana-dueruem.webp"
+    },
+    {
+      "id": "030",
+      "number": "30",
+      "category": "grillgerichte",
+      "price": 17.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hähnchenspieß",
+        "en": "Chicken Skewer",
+        "tr": "Tavuk Şiş",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Beilage nach Wahl.",
+        "en": "With side of choice.",
+        "tr": "Seçilen garnitür ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/haehnchenspiess.webp"
+    },
+    {
+      "id": "031",
+      "number": "31",
+      "category": "grillgerichte",
+      "price": 17.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Hähnchenkotelett",
+        "en": "Chicken Chops",
+        "tr": "Tavuk Pirzola",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Beilage nach Wahl.",
+        "en": "With side of choice.",
+        "tr": "Seçilen garnitür ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/haehnchenkotelett.webp"
+    },
+    {
+      "id": "032",
+      "number": "32",
+      "category": "grillgerichte",
+      "price": 59.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Sultan Kebap",
+        "en": "Sultan Kebap",
+        "tr": "Sultan Kebap",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Premium-Grillplatte für Genießer mit Beilage nach Wahl.",
+        "en": "Premium grill platter for connoisseurs with side of choice.",
+        "tr": "Seçilen garnitür ile premium ızgara tabağı.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "premium"
+      ],
+      "allergens": [],
+      "image": "/images/menu/sultan-kebap.webp"
+    },
+    {
+      "id": "033",
+      "number": "33",
+      "category": "steakspezialitaeten",
+      "price": 49.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Cowboy Steak",
+        "en": "Cowboy Steak",
+        "tr": "Cowboy Steak",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Dry Aged Rumpsteak ca. 1000 g — kräftig und saftig.",
+        "en": "Dry aged rump steak approx. 1000 g — bold and juicy.",
+        "tr": "Dry aged bonfilet yaklaşık 1000 g.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "premium"
+      ],
+      "allergens": [],
+      "image": "/images/menu/cowboy-steak.webp"
+    },
+    {
+      "id": "034",
       "number": "34",
-      "category": "grill-steaks",
+      "category": "steakspezialitaeten",
+      "price": 49.9,
+      "currency": "EUR",
+      "name": {
+        "de": "T-Bone Steak",
+        "en": "T-Bone Steak",
+        "tr": "T-Bone Steak",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Dry Aged T-Bone ca. 1000 g vom Grill.",
+        "en": "Dry aged T-bone approx. 1000 g from the grill.",
+        "tr": "Dry aged T-bone yaklaşık 1000 g.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal",
+        "premium"
+      ],
+      "allergens": [],
+      "image": "/images/menu/t-bone-steak.webp"
+    },
+    {
+      "id": "035",
+      "number": "35",
+      "category": "steakspezialitaeten",
       "price": 39.9,
       "currency": "EUR",
       "name": {
@@ -183,9 +1514,9 @@
         "it": ""
       },
       "description": {
-        "de": "Zartes Rinderfilet vom Grill, butterweich und auf den Punkt gegart.",
-        "en": "Tender beef fillet from the grill, cooked to perfection.",
-        "tr": "Izgaradan yumuşacık dana fileto, mükemmel pişmiş.",
+        "de": "Zartes Rinderfilet, butterweich und auf den Punkt gegart.",
+        "en": "Tender beef fillet, cooked to perfection.",
+        "tr": "Yumuşacık dana fileto, mükemmel pişmiş.",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -194,15 +1525,126 @@
         "es": "",
         "it": ""
       },
-      "tags": ["halal", "premium"],
+      "tags": [
+        "halal",
+        "premium"
+      ],
       "allergens": [],
-      "image": "/images/menu/dish-34.webp"
+      "image": "/images/menu/filet-steak-ca-300-gr.webp"
     },
     {
-      "id": "39",
+      "id": "036",
+      "number": "36",
+      "category": "steakspezialitaeten",
+      "price": 34.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Rumpsteak ca. 350 gr",
+        "en": "Rump Steak approx. 350 g",
+        "tr": "Bonfilet yakl. 350 gr",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Saftiges Dry Aged Rumpsteak vom Grill.",
+        "en": "Juicy dry aged rump steak from the grill.",
+        "tr": "Izgaradan sulu dry aged bonfilet.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [],
+      "image": "/images/menu/rumpsteak-ca-350-gr.webp"
+    },
+    {
+      "id": "037",
+      "number": "37",
+      "category": "buffalo-steaks",
+      "price": 44.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Büffel Filet Steak ca. 250 gr",
+        "en": "Buffalo Fillet approx. 250 g",
+        "tr": "Manda Fileto yakl. 250 gr",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Exklusives Büffel-Filet mit intensiver Marmorierung.",
+        "en": "Exclusive buffalo fillet with rich marbling.",
+        "tr": "Yoğun mermerli manda fileto.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "premium"
+      ],
+      "allergens": [],
+      "image": "/images/menu/bueffel-filet-steak-ca-250-gr.webp"
+    },
+    {
+      "id": "038",
+      "number": "38",
+      "category": "buffalo-steaks",
+      "price": 44.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Büffel Rib Eye Steak ca. 350 gr",
+        "en": "Buffalo Rib Eye approx. 350 g",
+        "tr": "Manda Rib Eye yakl. 350 gr",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Saftiges Büffel-Ribeye vom Grill.",
+        "en": "Juicy buffalo rib eye from the grill.",
+        "tr": "Izgaradan sulu manda rib eye.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "premium"
+      ],
+      "allergens": [],
+      "image": "/images/menu/bueffel-rib-eye-steak-ca-350-gr.webp"
+    },
+    {
+      "id": "039",
       "number": "39",
-      "category": "grill-steaks",
-      "price": 129.0,
+      "category": "wagyu-steaks",
+      "price": 99,
       "currency": "EUR",
       "name": {
         "de": "Wagyu Filet ca. 200 gr",
@@ -217,9 +1659,9 @@
         "it": ""
       },
       "description": {
-        "de": "Exklusives Wagyu-Filet von höchster Marmorierung — ein außergewöhnliches Geschmackserlebnis.",
-        "en": "Exclusive Wagyu fillet with supreme marbling — an extraordinary taste experience.",
-        "tr": "Üstün mermerleme ile özel Wagyu fileto — olağanüstü bir lezzet deneyimi.",
+        "de": "Exklusives Wagyu-Filet von höchster Marmorierung.",
+        "en": "Exclusive Wagyu fillet with supreme marbling.",
+        "tr": "Üstün mermerli Wagyu fileto.",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -228,13 +1670,721 @@
         "es": "",
         "it": ""
       },
-      "tags": ["halal", "premium", "bestseller"],
+      "tags": [
+        "premium",
+        "bestseller"
+      ],
       "allergens": [],
-      "image": "/images/menu/dish-39.webp"
+      "image": "/images/menu/wagyu-filet-ca-200-gr.webp"
     },
     {
-      "id": "42",
+      "id": "040",
+      "number": "40",
+      "category": "wagyu-steaks",
+      "price": 129,
+      "currency": "EUR",
+      "name": {
+        "de": "Wagyu Ribeye ca. 300 gr",
+        "en": "Wagyu Ribeye approx. 300 g",
+        "tr": "Wagyu Ribeye yakl. 300 gr",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Premium Wagyu Ribeye — ein außergewöhnliches Geschmackserlebnis.",
+        "en": "Premium Wagyu ribeye — an extraordinary experience.",
+        "tr": "Premium Wagyu ribeye — olağanüstü lezzet.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "premium"
+      ],
+      "allergens": [],
+      "image": "/images/menu/wagyu-ribeye-ca-300-gr.webp"
+    },
+    {
+      "id": "041",
+      "number": "41",
+      "category": "teiggerichte",
+      "price": 4.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lahmacun Sade",
+        "en": "Plain Lahmacun",
+        "tr": "Sade Lahmacun",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Türkische Pizza ohne Belag — knusprig und klassisch.",
+        "en": "Turkish flatbread without topping — crispy and classic.",
+        "tr": "Sussuz Türk pidesi — çıtır ve klasik.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/lahmacun-sade.webp"
+    },
+    {
+      "id": "042",
       "number": "42",
+      "category": "teiggerichte",
+      "price": 10.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lahmacun Dönerli",
+        "en": "Lahmacun with Döner",
+        "tr": "Dönerli Lahmacun",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Türkische Pizza mit Dönerfleisch.",
+        "en": "Turkish flatbread with döner meat.",
+        "tr": "Döner etli lahmacun.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/lahmacun-doenerli.webp"
+    },
+    {
+      "id": "043",
+      "number": "43",
+      "category": "teiggerichte",
+      "price": 11.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Türkische Tortellini",
+        "en": "Turkish Manti",
+        "tr": "Mantı",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Gefüllt mit Hackfleisch, Butter und Joghurtsauce.",
+        "en": "Filled with minced meat, butter and yogurt sauce.",
+        "tr": "Kıyma, tereyağı ve yoğurt sosu ile.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G",
+        "C"
+      ],
+      "image": "/images/menu/tuerkische-tortellini.webp"
+    },
+    {
+      "id": "044",
+      "number": "44",
+      "category": "teiggerichte",
+      "price": 11.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lammfleisch Pide",
+        "en": "Lamb Pide",
+        "tr": "Kuzu Pide",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Teigschiffchen mit Lammfleischwürfeln und Gouda.",
+        "en": "Boat pastry with lamb cubes and Gouda.",
+        "tr": "Kuzu küpleri ve gouda ile pide.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/lammfleisch-pide.webp"
+    },
+    {
+      "id": "045",
+      "number": "45",
+      "category": "teiggerichte",
+      "price": 11.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Dönerfleisch Pide",
+        "en": "Döner Pide",
+        "tr": "Döner Pide",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Teigschiffchen mit saftigem Dönerfleisch.",
+        "en": "Boat pastry with juicy döner meat.",
+        "tr": "Sulu döner eti ile pide.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/doenerfleisch-pide.webp"
+    },
+    {
+      "id": "046",
+      "number": "46",
+      "category": "teiggerichte",
+      "price": 9.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Gemüse Pide",
+        "en": "Vegetable Pide",
+        "tr": "Sebze Pide",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Teigschiffchen mit frischem Gemüse.",
+        "en": "Boat pastry with fresh vegetables.",
+        "tr": "Taze sebzelerle pide.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/gemuese-pide.webp"
+    },
+    {
+      "id": "047",
+      "number": "47",
+      "category": "teiggerichte",
+      "price": 5.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Lahmacun Dürüm",
+        "en": "Lahmacun Dürüm",
+        "tr": "Lahmacun Dürüm",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Türkische Pizza mit Salat im Dürüm.",
+        "en": "Turkish flatbread wrap with salad.",
+        "tr": "Salatalı lahmacun dürüm.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "halal"
+      ],
+      "allergens": [
+        "A"
+      ],
+      "image": "/images/menu/lahmacun-dueruem.webp"
+    },
+    {
+      "id": "048",
+      "number": "48",
+      "category": "beilagen",
+      "price": 2.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Pommes Frites",
+        "en": "French Fries",
+        "tr": "Patates Kızartması",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Knusprig goldbraun frittiert — außen knusprig, innen weich.",
+        "en": "Crispy golden fries — crunchy outside, soft inside.",
+        "tr": "Dışı çıtır, içi yumuşak altın patates.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/pommes-frites.webp"
+    },
+    {
+      "id": "049",
+      "number": "49",
+      "category": "beilagen",
+      "price": 4.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Rahmspinat",
+        "en": "Creamed Spinach",
+        "tr": "Kremalı Ispanak",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Cremiger Rahmspinat als Beilage.",
+        "en": "Creamy spinach side dish.",
+        "tr": "Kremalı ıspanak garnitür.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/rahmspinat.webp"
+    },
+    {
+      "id": "050",
+      "number": "50",
+      "category": "beilagen",
+      "price": 4.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Bratkartoffeln mit Rosmarin",
+        "en": "Pan-Fried Potatoes with Rosemary",
+        "tr": "Biberiyeli Rosto Patates",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Goldbraune Bratkartoffeln mit Rosmarin.",
+        "en": "Golden pan-fried potatoes with rosemary.",
+        "tr": "Biberiyeli rosto patates.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [],
+      "image": "/images/menu/bratkartoffeln-mit-rosmarin.webp"
+    },
+    {
+      "id": "051",
+      "number": "51",
+      "category": "beilagen",
+      "price": 5,
+      "currency": "EUR",
+      "name": {
+        "de": "Süßkartoffelpommes",
+        "en": "Sweet Potato Fries",
+        "tr": "Tatlı Patates Kızartması",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Knusprige Süßkartoffelpommes.",
+        "en": "Crispy sweet potato fries.",
+        "tr": "Çıtır tatlı patates kızartması.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [],
+      "image": "/images/menu/suesskartoffelpommes.webp"
+    },
+    {
+      "id": "052",
+      "number": "52",
+      "category": "saucen",
+      "price": 1,
+      "currency": "EUR",
+      "name": {
+        "de": "Scharfe Sauce",
+        "en": "Hot Sauce",
+        "tr": "Acı Sos",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Intensive Sauce mit angenehmer Schärfe.",
+        "en": "Intense sauce with pleasant heat.",
+        "tr": "Hoş acılık veren yoğun sos.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/scharfe-sauce.webp"
+    },
+    {
+      "id": "053",
+      "number": "53",
+      "category": "saucen",
+      "price": 1,
+      "currency": "EUR",
+      "name": {
+        "de": "Ketchup",
+        "en": "Ketchup",
+        "tr": "Ketçap",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Klassische süß-säuerliche Tomatensauce.",
+        "en": "Classic sweet and tangy tomato sauce.",
+        "tr": "Klasik tatlı-ekşi domates sosu.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/ketchup.webp"
+    },
+    {
+      "id": "054",
+      "number": "54",
+      "category": "saucen",
+      "price": 1,
+      "currency": "EUR",
+      "name": {
+        "de": "Mayonnaise",
+        "en": "Mayonnaise",
+        "tr": "Mayonez",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Cremige Mayonnaise.",
+        "en": "Creamy mayonnaise.",
+        "tr": "Kremalı mayonez.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [
+        "C"
+      ],
+      "image": "/images/menu/mayonnaise.webp"
+    },
+    {
+      "id": "055",
+      "number": "55",
+      "category": "saucen",
+      "price": 1,
+      "currency": "EUR",
+      "name": {
+        "de": "Joghurtsauce",
+        "en": "Yogurt Sauce",
+        "tr": "Yoğurt Sosu",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Cremige Joghurtsauce mit frischen Kräutern.",
+        "en": "Creamy yogurt sauce with fresh herbs.",
+        "tr": "Taze otlu yoğurt sosu.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/joghurtsauce.webp"
+    },
+    {
+      "id": "056",
+      "number": "56",
+      "category": "saucen",
+      "price": 1,
+      "currency": "EUR",
+      "name": {
+        "de": "Cocktailsauce",
+        "en": "Cocktail Sauce",
+        "tr": "Cocktail Sos",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Cremige Sauce mit süßlicher Würze.",
+        "en": "Creamy sauce with a sweet note.",
+        "tr": "Hafif tatlı kremalı sos.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [
+        "C"
+      ],
+      "image": "/images/menu/cocktailsauce.webp"
+    },
+    {
+      "id": "057",
+      "number": "57",
+      "category": "nachtisch",
+      "price": 4.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Milchreis",
+        "en": "Rice Pudding",
+        "tr": "Sütlaç",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Mit Vanille — cremig und süß.",
+        "en": "With vanilla — creamy and sweet.",
+        "tr": "Vanilyalı — kremsi ve tatlı.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/milchreis.webp"
+    },
+    {
+      "id": "058",
+      "number": "58",
+      "category": "nachtisch",
+      "price": 7.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Künefe",
+        "en": "Künefe",
+        "tr": "Künefe",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Fadenteig mit Käse, goldbraun gebacken und mit Sirup verfeinert.",
+        "en": "Shredded phyllo with cheese, baked golden with syrup.",
+        "tr": "Peynirli tel kadayıf, şerbetli.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [
+        "vegetarian",
+        "bestseller"
+      ],
+      "allergens": [
+        "A",
+        "G"
+      ],
+      "image": "/images/menu/kuenefe.webp"
+    },
+    {
+      "id": "059",
+      "number": "59",
       "category": "nachtisch",
       "price": 7.9,
       "currency": "EUR",
@@ -253,7 +2403,7 @@
       "description": {
         "de": "Gefalteter Teig mit Sahne und Pistazien, warm serviert.",
         "en": "Folded pastry with cream and pistachios, served warm.",
-        "tr": "Krema ve antep fıstığı ile katlanmış hamur, sıcak servis.",
+        "tr": "Krema ve antep fıstığı ile katmer, sıcak.",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -262,20 +2412,27 @@
         "es": "",
         "it": ""
       },
-      "tags": ["vegetarian", "bestseller"],
-      "allergens": ["gluten", "milch", "nüsse"],
-      "image": "/images/menu/dish-42.webp"
+      "tags": [
+        "vegetarian",
+        "bestseller"
+      ],
+      "allergens": [
+        "A",
+        "G",
+        "H"
+      ],
+      "image": "/images/menu/katmer.webp"
     },
     {
-      "id": "43",
-      "number": "43",
-      "category": "nachtisch",
-      "price": 7.9,
+      "id": "060",
+      "number": "60",
+      "category": "getraenke",
+      "price": 2.9,
       "currency": "EUR",
       "name": {
-        "de": "Künefe",
-        "en": "Künefe",
-        "tr": "Künefe",
+        "de": "Coca-Cola 0,33l",
+        "en": "Coca-Cola 0.33l",
+        "tr": "Coca-Cola 0,33l",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -285,9 +2442,9 @@
         "it": ""
       },
       "description": {
-        "de": "Fadenteig mit Käse, goldbraun gebacken und mit Sirup verfeinert.",
-        "en": "Shredded phyllo with cheese, baked golden and finished with syrup.",
-        "tr": "Peynirli tel kadayıf, altın renginde pişirilmiş, şerbetli.",
+        "de": "Erfrischend und klassisch.",
+        "en": "Refreshing and classic.",
+        "tr": "Ferahlatan ve klasik.",
         "fr": "",
         "nl": "",
         "pl": "",
@@ -296,9 +2453,249 @@
         "es": "",
         "it": ""
       },
-      "tags": ["vegetarian", "bestseller"],
-      "allergens": ["gluten", "milch"],
-      "image": "/images/menu/dish-43.webp"
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/coca-cola-0-33l.webp"
+    },
+    {
+      "id": "061",
+      "number": "61",
+      "category": "getraenke",
+      "price": 2.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Fanta Orange 0,33l",
+        "en": "Fanta Orange 0.33l",
+        "tr": "Fanta Portakal 0,33l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Spritzig erfrischend.",
+        "en": "Sparkling and refreshing.",
+        "tr": "Gazlı ve ferahlatıcı.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/fanta-orange-0-33l.webp"
+    },
+    {
+      "id": "062",
+      "number": "62",
+      "category": "getraenke",
+      "price": 2.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Sprite 0,33l",
+        "en": "Sprite 0.33l",
+        "tr": "Sprite 0,33l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Zitronig-limettenfrisch.",
+        "en": "Lemon-lime refreshment.",
+        "tr": "Limonlu ferahlık.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/sprite-0-33l.webp"
+    },
+    {
+      "id": "063",
+      "number": "63",
+      "category": "getraenke",
+      "price": 2.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Mezzo Mix 0,33l",
+        "en": "Mezzo Mix 0.33l",
+        "tr": "Mezzo Mix 0,33l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Cola trifft Orange.",
+        "en": "Cola meets orange.",
+        "tr": "Kola ve portakal.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/mezzo-mix-0-33l.webp"
+    },
+    {
+      "id": "064",
+      "number": "64",
+      "category": "getraenke",
+      "price": 4.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Mineralwasser mit Kohlensäure 0,75l",
+        "en": "Sparkling Mineral Water 0.75l",
+        "tr": "Maden Suyu Gazlı 0,75l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Erfrischendes Mineralwasser mit Kohlensäure.",
+        "en": "Sparkling mineral water.",
+        "tr": "Gazlı maden suyu.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/mineralwasser-mit-kohlensaeure-0-75l.webp"
+    },
+    {
+      "id": "065",
+      "number": "65",
+      "category": "getraenke",
+      "price": 2.5,
+      "currency": "EUR",
+      "name": {
+        "de": "Mineralwasser still 0,75l",
+        "en": "Still Mineral Water 0.75l",
+        "tr": "Maden Suyu Sade 0,75l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Stilles Mineralwasser.",
+        "en": "Still mineral water.",
+        "tr": "Sade maden suyu.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/mineralwasser-still-0-75l.webp"
+    },
+    {
+      "id": "066",
+      "number": "66",
+      "category": "getraenke",
+      "price": 1.9,
+      "currency": "EUR",
+      "name": {
+        "de": "Ayran 0,33l",
+        "en": "Ayran 0.33l",
+        "tr": "Ayran 0,33l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Traditioneller Joghurtgetränk.",
+        "en": "Traditional yogurt drink.",
+        "tr": "Geleneksel yoğurt içeceği.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [
+        "G"
+      ],
+      "image": "/images/menu/ayran-0-33l.webp"
+    },
+    {
+      "id": "067",
+      "number": "67",
+      "category": "getraenke",
+      "price": 2.5,
+      "currency": "EUR",
+      "name": {
+        "de": "Red Bull 0,25l",
+        "en": "Red Bull 0.25l",
+        "tr": "Red Bull 0,25l",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "description": {
+        "de": "Energy Drink.",
+        "en": "Energy drink.",
+        "tr": "Enerji içeceği.",
+        "fr": "",
+        "nl": "",
+        "pl": "",
+        "ar": "",
+        "uk": "",
+        "es": "",
+        "it": ""
+      },
+      "tags": [],
+      "allergens": [],
+      "image": "/images/menu/red-bull-0-25l.webp"
     }
   ]
 }
