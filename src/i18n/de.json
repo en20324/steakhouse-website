@@ -92,5 +92,25 @@
   },
   "common": {
     "language": "Sprache"
+  },
+  "socialProof": {
+    "eyebrow": "Gästestimmen",
+    "title": "Was unsere Gäste sagen",
+    "subtitle": "Bald mit Live-Bewertungen von Google und Trustpilot — vorerst eine Vorschau unseres Premium-Erlebnisses.",
+    "widgetPlaceholder": "Widget-Platzhalter",
+    "google": {
+      "label": "Google Bewertungen",
+      "reviewCount": "Basierend auf Gästefeedback"
+    },
+    "trustpilot": {
+      "label": "Trustpilot",
+      "reviewCount": "Verifizierte Empfehlungen"
+    },
+    "reviews": {
+      "wagyu": "Bestes Wagyu in Duisburg — zart, perfekt gegrillt und ein echtes Erlebnis.",
+      "doner": "Der Wet-Aged Döner ist ein Traum. Nichts Vergleichbares in der Stadt.",
+      "service": "Erstklassiger Service und eine Atmosphäre, die man sofort spürt.",
+      "atmosphere": "Premium-Steakhouse-Feeling mitten in Duisburg. Absolut empfehlenswert."
+    }
   }
 }

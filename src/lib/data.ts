@@ -7,6 +7,10 @@ export const BUSINESS = businessJson as BusinessData;
 
 export const BUSINESS_ADDRESS = `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}`;
 
+export const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+  `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}, ${BUSINESS.country}`
+)}`;
+
 export const MENU_DATA = menuJson as MenuData;
 
 export const MENU_QR_URL = `${BUSINESS.siteUrl.replace(/\/$/, "")}/menu`;

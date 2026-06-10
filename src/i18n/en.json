@@ -92,5 +92,25 @@
   },
   "common": {
     "language": "Language"
+  },
+  "socialProof": {
+    "eyebrow": "Guest Reviews",
+    "title": "What our guests say",
+    "subtitle": "Live Google and Trustpilot ratings coming soon — a preview of our premium experience for now.",
+    "widgetPlaceholder": "Widget placeholder",
+    "google": {
+      "label": "Google Reviews",
+      "reviewCount": "Based on guest feedback"
+    },
+    "trustpilot": {
+      "label": "Trustpilot",
+      "reviewCount": "Verified recommendations"
+    },
+    "reviews": {
+      "wagyu": "Best wagyu in Duisburg — tender, perfectly grilled and a true experience.",
+      "doner": "The wet-aged döner is a dream. Nothing like it in the city.",
+      "service": "First-class service and an atmosphere you feel instantly.",
+      "atmosphere": "Premium steakhouse vibes in the heart of Duisburg. Highly recommended."
+    }
   }
 }

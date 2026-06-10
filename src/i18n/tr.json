@@ -92,5 +92,25 @@
   },
   "common": {
     "language": "Dil"
+  },
+  "socialProof": {
+    "eyebrow": "Misafir Yorumları",
+    "title": "Misafirlerimiz ne diyor",
+    "subtitle": "Yakında Google ve Trustpilot canlı puanları — şimdilik premium deneyimimizin bir önizlemesi.",
+    "widgetPlaceholder": "Widget yer tutucu",
+    "google": {
+      "label": "Google Yorumları",
+      "reviewCount": "Misafir geri bildirimine dayalı"
+    },
+    "trustpilot": {
+      "label": "Trustpilot",
+      "reviewCount": "Doğrulanmış öneriler"
+    },
+    "reviews": {
+      "wagyu": "Duisburg'daki en iyi wagyu — yumuşak, mükemmel ızgara ve gerçek bir deneyim.",
+      "doner": "Wet-aged döner bir rüya. Şehirde benzeri yok.",
+      "service": "Birinci sınıf servis ve hemen hissedilen bir atmosfer.",
+      "atmosphere": "Duisburg'un kalbinde premium steakhouse atmosferi. Kesinlikle tavsiye edilir."
+    }
   }
 }

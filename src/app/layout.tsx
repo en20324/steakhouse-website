@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { Providers } from "@/app/providers";
 import { BUSINESS } from "@/lib/data";
 import { restaurantJsonLd } from "@/lib/seo/restaurant-schema";
@@ -60,11 +58,7 @@ export default function RootLayout({
         className="flex min-h-full flex-col bg-background text-foreground"
         style={{ backgroundColor: "#050505" }}
       >
-        <Providers>
-          <Header />
-          <div className="flex flex-1 flex-col pt-28">{children}</div>
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
