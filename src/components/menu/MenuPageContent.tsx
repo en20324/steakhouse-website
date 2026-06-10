@@ -199,7 +199,7 @@ export default function MenuPageContent({
           className="mt-16 flex justify-center"
         >
           <Link
-            href="/La-Savi-Speisekarte.pdf"
+            href="/menu.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 rounded-full border border-accent-gold/30 bg-surface-elevated px-8 py-4 text-sm font-medium tracking-[0.1em] text-foreground transition-all duration-500 hover:border-accent-gold/55 hover:shadow-[0_0_36px_rgba(212,175,55,0.18)]"
