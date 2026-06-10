@@ -1,38 +1,25 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   BookOpen,
-  ChevronDown,
-  MapPin,
   MessageCircle,
   Phone,
   UtensilsCrossed,
   type LucideIcon,
 } from "lucide-react";
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
+  AppleMapsGoldIcon,
+  GoogleMapsGoldIcon,
+} from "@/components/bio/MapProviderIcons";
 import { BUSINESS } from "@/lib/data";
-import {
-  detectPreferredMapProvider,
-  getAppleMapsUrl,
-  getGoogleMapsUrl,
-  type MapProvider,
-} from "@/lib/maps";
+import { getAppleMapsUrl, getGoogleMapsUrl } from "@/lib/maps";
 
 export const BIO_LINK_CLASSNAME =
   "bio-action-link flex h-[52px] w-full items-center justify-center rounded-2xl border border-accent-gold/45 bg-surface/80 px-5 text-sm font-medium tracking-wide text-foreground shadow-[0_0_0_1px_rgba(212,175,55,0.08),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm transition-all duration-300 hover:border-accent-gold hover:bg-accent-gold/10 hover:text-accent-gold hover:shadow-[0_0_24px_rgba(212,175,55,0.22)] active:scale-[0.98] motion-safe:hover:scale-[1.01] sm:text-base";
 
-const BIO_ICON_CLASSNAME =
-  "mr-3 h-[18px] w-[18px] shrink-0 text-accent-gold";
-
-const MAP_MENU_ITEM_CLASSNAME =
-  "flex h-11 w-full items-center justify-center rounded-xl px-4 text-sm tracking-wide transition-all duration-300";
+const BIO_ICON_WRAPPER_CLASSNAME =
+  "mr-3 flex h-[18px] w-[18px] shrink-0 items-center justify-center text-accent-gold";
 
 const STATIC_LINKS = [
   {
@@ -63,42 +50,35 @@ const STATIC_LINKS = [
   },
 ] as const;
 
-const MAP_OPTIONS = [
-  {
-    provider: "google" as const,
-    label: "Mit Google Maps öffnen",
-    href: getGoogleMapsUrl(),
-  },
-  {
-    provider: "apple" as const,
-    label: "Mit Apple Karten öffnen",
-    href: getAppleMapsUrl(),
-  },
-] as const;
-
 function BioLinkContent({
-  icon: Icon,
+  icon,
   label,
 }: {
-  icon: LucideIcon;
+  icon: React.ReactNode;
   label: string;
 }) {
   return (
     <>
-      <Icon
-        className={BIO_ICON_CLASSNAME}
-        strokeWidth={1.75}
-        aria-hidden
-      />
+      <span className={BIO_ICON_WRAPPER_CLASSNAME}>{icon}</span>
       <span>{label}</span>
     </>
+  );
+}
+
+function BioLucideIcon({ icon: Icon }: { icon: LucideIcon }) {
+  return (
+    <Icon
+      className="h-[18px] w-[18px]"
+      strokeWidth={1.75}
+      aria-hidden
+    />
   );
 }
 
 interface ExternalBioLinkProps {
   href: string;
   label: string;
-  icon: LucideIcon;
+  icon: React.ReactNode;
   ariaLabel?: string;
   newTab?: boolean;
 }
@@ -122,65 +102,6 @@ function ExternalBioLink({
   );
 }
 
-function MapDirectionsPicker() {
-  const [preferredProvider, setPreferredProvider] =
-    useState<MapProvider>("google");
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setPreferredProvider(detectPreferredMapProvider(navigator.userAgent));
-  }, []);
-
-  return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <button
-          type="button"
-          className={cn(BIO_LINK_CLASSNAME, "relative")}
-          aria-label="Anfahrt planen — Karten-App auswählen"
-          aria-haspopup="menu"
-          aria-expanded={open}
-        >
-          <BioLinkContent icon={MapPin} label="Anfahrt planen" />
-          <ChevronDown
-            className={cn(
-              "absolute right-5 h-4 w-4 text-accent-gold/70 transition-transform duration-300",
-              open && "rotate-180"
-            )}
-            aria-hidden
-          />
-        </button>
-      </PopoverTrigger>
-
-      <PopoverContent
-        side="bottom"
-        align="center"
-        role="menu"
-        aria-label="Karten-App auswählen"
-      >
-        {MAP_OPTIONS.map((option) => (
-          <a
-            key={option.provider}
-            href={option.href}
-            role="menuitem"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              MAP_MENU_ITEM_CLASSNAME,
-              option.provider === preferredProvider
-                ? "bg-accent-gold/10 text-accent-gold"
-                : "text-accent-gold/75 hover:bg-accent-gold/[0.08] hover:text-accent-gold"
-            )}
-            onClick={() => setOpen(false)}
-          >
-            {option.label}
-          </a>
-        ))}
-      </PopoverContent>
-    </Popover>
-  );
-}
-
 export default function BioNavigation() {
   return (
     <nav
@@ -193,17 +114,36 @@ export default function BioNavigation() {
             key={item.href}
             href={item.href}
             label={item.label}
-            icon={item.icon}
+            icon={<BioLucideIcon icon={item.icon} />}
             newTab={"newTab" in item ? item.newTab : true}
           />
         ) : (
           <Link key={item.href} href={item.href} className={BIO_LINK_CLASSNAME}>
-            <BioLinkContent icon={item.icon} label={item.label} />
+            <BioLinkContent
+              icon={<BioLucideIcon icon={item.icon} />}
+              label={item.label}
+            />
           </Link>
         )
       )}
 
-      <MapDirectionsPicker />
+      <ExternalBioLink
+        href={getAppleMapsUrl()}
+        label="Apple Karten"
+        icon={<AppleMapsGoldIcon className="h-[18px] w-[18px]" />}
+        ariaLabel="In Apple Karten öffnen"
+      />
+
+      <ExternalBioLink
+        href={getGoogleMapsUrl()}
+        label="Google Maps"
+        icon={<GoogleMapsGoldIcon className="h-[18px] w-[18px]" />}
+        ariaLabel="In Google Maps öffnen"
+      />
+
+      <p className="pt-0.5 text-center text-[11px] tracking-wide text-accent-gold/65">
+        Navigation mit Ihrer bevorzugten Karten-App
+      </p>
     </nav>
   );
 }
