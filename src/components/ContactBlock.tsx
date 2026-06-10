@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/data";
+import { NAVIGATION_QUERY } from "@/lib/maps";
 import { useLanguage } from "@/context/LanguageProvider";
 import { Button } from "@/components/ui/button";
 
 const MAP_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponent(
-  `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}`
+  NAVIGATION_QUERY
 )}&z=15&output=embed`;
 
 export default function ContactBlock() {

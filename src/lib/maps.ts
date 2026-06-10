@@ -1,17 +1,17 @@
-export const NAVIGATION_ADDRESS = "Untermauerstraße 4, 47051 Duisburg";
+import { BUSINESS, BUSINESS_ADDRESS } from "@/lib/data";
+
+export const NAVIGATION_PLACE_NAME = BUSINESS.name;
+export const NAVIGATION_ADDRESS = BUSINESS_ADDRESS;
+export const NAVIGATION_QUERY = `${NAVIGATION_PLACE_NAME}, ${NAVIGATION_ADDRESS}`;
 
 export type MapProvider = "apple" | "google";
 
-export function getAppleMapsUrl(
-  address: string = NAVIGATION_ADDRESS
-): string {
-  return `https://maps.apple.com/?q=${encodeURIComponent(address)}`;
+export function getAppleMapsUrl(query: string = NAVIGATION_QUERY): string {
+  return `https://maps.apple.com/?q=${encodeURIComponent(query)}`;
 }
 
-export function getGoogleMapsUrl(
-  address: string = NAVIGATION_ADDRESS
-): string {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+export function getGoogleMapsUrl(query: string = NAVIGATION_QUERY): string {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
 /**
@@ -46,11 +46,11 @@ export function detectPreferredMapProvider(userAgent: string): MapProvider {
 
 export function getPreferredMapUrl(
   userAgent: string,
-  address: string = NAVIGATION_ADDRESS
+  query: string = NAVIGATION_QUERY
 ): string {
   return detectPreferredMapProvider(userAgent) === "apple"
-    ? getAppleMapsUrl(address)
-    : getGoogleMapsUrl(address);
+    ? getAppleMapsUrl(query)
+    : getGoogleMapsUrl(query);
 }
 
 export function getMapProviderLabel(provider: MapProvider): string {
