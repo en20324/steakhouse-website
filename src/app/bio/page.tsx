@@ -4,7 +4,7 @@ import BioNavigation from "@/components/bio/BioNavigation";
 
 export default function BioPage() {
   return (
-    <main className="relative flex flex-1 flex-col items-center px-4 py-7 sm:py-12">
+    <main className="relative flex flex-1 flex-col items-center px-[max(1rem,env(safe-area-inset-left))] pb-[max(1.75rem,env(safe-area-inset-bottom))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(1.75rem,env(safe-area-inset-top))] sm:px-4 sm:pb-12 sm:pt-12">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.11)_0%,rgba(212,175,55,0.04)_38%,transparent_62%)]"
         aria-hidden
