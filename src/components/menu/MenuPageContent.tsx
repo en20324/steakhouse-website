@@ -198,7 +198,7 @@ export default function MenuPageContent({
           transition={{ duration: 0.7, ease: EASE_PREMIUM }}
           className="mt-16 flex justify-center"
         >
-          <Link
+          <a
             href="/menu.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -210,7 +210,7 @@ export default function MenuPageContent({
               aria-hidden
             />
             {t("menu.pdfCta")}
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
