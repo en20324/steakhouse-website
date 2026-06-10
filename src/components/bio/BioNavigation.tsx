@@ -4,19 +4,24 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   BookOpen,
+  ChevronDown,
   MapPin,
   MessageCircle,
   Phone,
   UtensilsCrossed,
   type LucideIcon,
 } from "lucide-react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 import { BUSINESS } from "@/lib/data";
 import {
   detectPreferredMapProvider,
   getAppleMapsUrl,
   getGoogleMapsUrl,
-  getMapProviderLabel,
-  getPreferredMapUrl,
   type MapProvider,
 } from "@/lib/maps";
 
@@ -25,6 +30,9 @@ export const BIO_LINK_CLASSNAME =
 
 const BIO_ICON_CLASSNAME =
   "mr-3 h-[18px] w-[18px] shrink-0 text-accent-gold";
+
+const MAP_MENU_ITEM_CLASSNAME =
+  "flex h-11 w-full items-center justify-center rounded-xl px-4 text-sm tracking-wide transition-all duration-300";
 
 const STATIC_LINKS = [
   {
@@ -52,6 +60,19 @@ const STATIC_LINKS = [
     icon: MessageCircle,
     external: true as const,
     newTab: true as const,
+  },
+] as const;
+
+const MAP_OPTIONS = [
+  {
+    provider: "google" as const,
+    label: "Mit Google Maps öffnen",
+    href: getGoogleMapsUrl(),
+  },
+  {
+    provider: "apple" as const,
+    label: "Mit Apple Karten öffnen",
+    href: getAppleMapsUrl(),
   },
 ] as const;
 
@@ -101,23 +122,66 @@ function ExternalBioLink({
   );
 }
 
-const MAP_ALT_LINK_CLASSNAME =
-  "text-[11px] tracking-wide text-accent-gold/65 transition-colors duration-300 hover:text-accent-gold";
-
-export default function BioNavigation() {
+function MapDirectionsPicker() {
   const [preferredProvider, setPreferredProvider] =
     useState<MapProvider>("google");
-  const [primaryMapUrl, setPrimaryMapUrl] = useState(getGoogleMapsUrl());
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const userAgent = navigator.userAgent;
-    const provider = detectPreferredMapProvider(userAgent);
-    setPreferredProvider(provider);
-    setPrimaryMapUrl(getPreferredMapUrl(userAgent));
+    setPreferredProvider(detectPreferredMapProvider(navigator.userAgent));
   }, []);
 
-  const primaryMapLabel = getMapProviderLabel(preferredProvider);
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <button
+          type="button"
+          className={cn(BIO_LINK_CLASSNAME, "relative")}
+          aria-label="Anfahrt planen — Karten-App auswählen"
+          aria-haspopup="menu"
+          aria-expanded={open}
+        >
+          <BioLinkContent icon={MapPin} label="Anfahrt planen" />
+          <ChevronDown
+            className={cn(
+              "absolute right-5 h-4 w-4 text-accent-gold/70 transition-transform duration-300",
+              open && "rotate-180"
+            )}
+            aria-hidden
+          />
+        </button>
+      </PopoverTrigger>
 
+      <PopoverContent
+        side="bottom"
+        align="center"
+        role="menu"
+        aria-label="Karten-App auswählen"
+      >
+        {MAP_OPTIONS.map((option) => (
+          <a
+            key={option.provider}
+            href={option.href}
+            role="menuitem"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              MAP_MENU_ITEM_CLASSNAME,
+              option.provider === preferredProvider
+                ? "bg-accent-gold/10 text-accent-gold"
+                : "text-accent-gold/75 hover:bg-accent-gold/[0.08] hover:text-accent-gold"
+            )}
+            onClick={() => setOpen(false)}
+          >
+            {option.label}
+          </a>
+        ))}
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export default function BioNavigation() {
   return (
     <nav
       className="mt-8 flex w-full flex-col gap-3 sm:mt-10"
@@ -139,36 +203,7 @@ export default function BioNavigation() {
         )
       )}
 
-      <ExternalBioLink
-        href={primaryMapUrl}
-        label="Anfahrt planen"
-        icon={MapPin}
-        ariaLabel={`Anfahrt planen — öffnet ${primaryMapLabel}`}
-      />
-
-      <div className="mt-1 flex items-center justify-center gap-3">
-        <a
-          href={getAppleMapsUrl()}
-          className={MAP_ALT_LINK_CLASSNAME}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="In Apple Karten öffnen"
-        >
-          Apple Karten
-        </a>
-        <span className="text-accent-gold/30" aria-hidden>
-          ·
-        </span>
-        <a
-          href={getGoogleMapsUrl()}
-          className={MAP_ALT_LINK_CLASSNAME}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="In Google Maps öffnen"
-        >
-          Google Maps
-        </a>
-      </div>
+      <MapDirectionsPicker />
     </nav>
   );
 }
