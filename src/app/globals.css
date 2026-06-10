@@ -108,23 +108,6 @@ a {
   touch-action: manipulation;
 }
 
-.bio-map-icon-button .bio-map-icon {
-  filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(600%)
-    hue-rotate(5deg) brightness(95%) contrast(90%);
-  opacity: 0.9;
-  transition:
-    filter 300ms ease,
-    opacity 300ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .bio-map-icon-button:hover .bio-map-icon {
-    filter: brightness(0) saturate(100%) invert(78%) sepia(42%) saturate(680%)
-      hue-rotate(5deg) brightness(102%) contrast(92%);
-    opacity: 1;
-  }
-}
-
 .bio-action-link {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;

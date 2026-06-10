@@ -29,7 +29,7 @@ export default function BioLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex min-h-[100dvh] flex-1 flex-col bg-background">
+    <div className="flex min-h-dvh w-full flex-col overflow-x-hidden bg-background">
       {children}
     </div>
   );

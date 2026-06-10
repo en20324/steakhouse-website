@@ -4,22 +4,30 @@ import BioNavigation from "@/components/bio/BioNavigation";
 
 export default function BioPage() {
   return (
-    <main className="relative flex flex-1 flex-col items-center px-[max(1rem,env(safe-area-inset-left))] pb-[max(1.75rem,env(safe-area-inset-bottom))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(1.75rem,env(safe-area-inset-top))] sm:px-4 sm:pb-12 sm:pt-12">
+    <main
+      className="relative mx-auto flex w-full max-w-md flex-1 flex-col items-center px-4 py-7 sm:py-12"
+      style={{
+        paddingTop: "max(1.75rem, env(safe-area-inset-top))",
+        paddingBottom: "max(1.75rem, env(safe-area-inset-bottom))",
+        paddingLeft: "max(1rem, env(safe-area-inset-left))",
+        paddingRight: "max(1rem, env(safe-area-inset-right))",
+      }}
+    >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.11)_0%,rgba(212,175,55,0.04)_38%,transparent_62%)]"
         aria-hidden
       />
 
-      <div className="relative mx-auto flex w-full max-w-md flex-1 flex-col items-center">
-        <div className="flex flex-col items-center text-center">
-          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-accent-gold/35 bg-surface shadow-[0_8px_32px_rgba(0,0,0,0.45),0_0_40px_rgba(212,175,55,0.14)] sm:h-28 sm:w-28 sm:shadow-[0_8px_32px_rgba(0,0,0,0.45),0_0_52px_rgba(212,175,55,0.16)]">
+      <div className="relative flex w-full flex-col items-center">
+        <div className="flex w-full flex-col items-center text-center">
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full border border-accent-gold/35 bg-surface shadow-[0_8px_32px_rgba(0,0,0,0.45),0_0_40px_rgba(212,175,55,0.14)] sm:h-28 sm:w-28 sm:shadow-[0_8px_32px_rgba(0,0,0,0.45),0_0_52px_rgba(212,175,55,0.16)]">
             <Image
               src="/logo-la-savi.webp"
               alt="La Savi Steakhouse Logo"
-              fill
+              width={150}
+              height={150}
               priority
-              sizes="112px"
-              className="object-contain p-3"
+              className="h-14 w-14 object-contain sm:h-20 sm:w-20"
             />
           </div>
 
@@ -43,7 +51,7 @@ export default function BioPage() {
 
         <BioNavigation />
 
-        <p className="mt-auto pt-8 text-center text-[10px] uppercase tracking-[0.35em] text-foreground-muted/70 sm:pt-10">
+        <p className="mt-auto w-full pt-8 text-center text-[10px] uppercase tracking-[0.35em] text-foreground-muted/70 sm:pt-10">
           Premium Steaks · Duisburg
         </p>
       </div>

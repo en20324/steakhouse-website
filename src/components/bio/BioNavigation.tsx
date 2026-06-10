@@ -65,7 +65,7 @@ function ExternalBioLink({
   );
 }
 
-function MapGoldIcon({ src }: { src: string }) {
+function MapAppIcon({ src }: { src: string }) {
   return (
     <Image
       src={src}
@@ -73,7 +73,7 @@ function MapGoldIcon({ src }: { src: string }) {
       width={44}
       height={44}
       sizes="44px"
-      className="bio-map-icon h-11 w-11 rounded-[22%] object-cover"
+      className="h-11 w-11 shrink-0 rounded-[22%] object-cover"
       aria-hidden
     />
   );
@@ -147,14 +147,14 @@ export default function BioNavigation() {
             href={getAppleMapsUrl()}
             ariaLabel="In Apple Karten öffnen"
           >
-            <MapGoldIcon src="/apple-maps-icon.png" />
+            <MapAppIcon src="/apple-maps-icon.png" />
           </MapProviderIconButton>
 
           <MapProviderIconButton
             href={getGoogleMapsUrl()}
             ariaLabel="In Google Maps öffnen"
           >
-            <MapGoldIcon src="/google-maps-icon.jpg" />
+            <MapAppIcon src="/google-maps-icon.jpg" />
           </MapProviderIconButton>
         </div>
 
